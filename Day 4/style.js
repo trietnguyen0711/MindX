@@ -32,8 +32,8 @@ btn.addEventListener("click", function () {
         errorPassword.innerText = "Please write your password"
     }
     else {
-        errorEmail.innerText = "Incorrect email"
-        errorPassword.innerText = "Incorrect password"
+        errorEmail.innerText = "Incorrect email or password"
+        errorPassword.innerText = "Incorrect email or password"
     }
 })
 // btn.addEventListener("click", function () {
