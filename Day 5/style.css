@@ -41,6 +41,7 @@
     min-width: 400px;
     min-height: 500px;
     transition: 1s;
+    box-shadow: 2px 4px 12px #00000014;
 }
 
 .size-products:hover {
@@ -52,6 +53,7 @@
     min-width: 320px;
     min-height: 240px;
     transition: 1s;
+    box-shadow: 2px 4px 12px #00000014;
 }
 
 .size-box:hover {
