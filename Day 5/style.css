@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+.size-circle {
+    border-radius: 50%;
+    width: 30px !important;
+    height: 30px !important;
+}
+
 .color-white {
     color: white;
 }
@@ -33,8 +39,22 @@
     color: black;
 }
 
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+}
+
 .cur-pointer {
     cursor: pointer;
+}
+
+.cur-pointerC {
+    cursor: pointer;
+}
+
+.cur-pointerC:hover {
+    border: 2px solid white;
 }
 
 .size-products {
