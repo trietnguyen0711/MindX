@@ -1,5 +1,16 @@
 let changeableImg = document.querySelectorAll(".changeableImg")
 let changeableContent = document.querySelector(".changeableContent")
+let bagContent = document.querySelector(".bagContent")
+let btn = document.querySelector(".btn")
+let countBag = localStorage.getItem("amountBag")
+countBag = parseInt(countBag)
+bagContent.innerHTML = `${countBag}`
+btn.addEventListener("click", function () {
+    countBag = countBag + 1
+    bagContent.innerHTML = `${countBag}`
+    localStorage.setItem("amountBag", countBag)
+    localStorage.setItem("checkPoint", true)
+})
 changeableContent.innerHTML = `
 <h6 style="color:red">New</h6>
 <h3 class="w-100">${localStorage.getItem("typeProduct")}</h3>
