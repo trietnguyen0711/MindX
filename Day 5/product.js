@@ -5,11 +5,26 @@ let btn = document.querySelector(".btn")
 let countBag = localStorage.getItem("amountBag")
 countBag = parseInt(countBag)
 bagContent.innerHTML = `${countBag}`
+let inforProduct = {
+    nameProduct: localStorage.getItem("typeProduct"),
+    price: localStorage.getItem("price"),
+    img: localStorage.getItem("img")
+}
+console.log(inforProduct)
 btn.addEventListener("click", function () {
     countBag = countBag + 1
     bagContent.innerHTML = `${countBag}`
     localStorage.setItem("amountBag", countBag)
-    localStorage.setItem("checkPoint", true)
+    if (localStorage.getItem("arrayProduct")) {
+        let arrayProduct = JSON.parse(localStorage.getItem("arrayProduct"))
+        arrayProduct.push(inforProduct)
+        localStorage.setItem("arrayProduct", JSON.stringify(arrayProduct))
+    }
+    else {
+        let arrayProduct = []
+        arrayProduct.push(inforProduct)
+        localStorage.setItem("arrayProduct", JSON.stringify(arrayProduct))
+    }
 })
 changeableContent.innerHTML = `
 <h6 style="color:red">New</h6>
