@@ -28,9 +28,10 @@ for (let i = 0; i < arrayProduct.length; i++) {
             </div>
             </div>
             `
+    total += parseInt(arrayProduct[i].price)
 }
 shoppingBag.innerHTML = addProduct
-let totalPrice = document.querySelector(".totalPrice").innerHTML = `Total : ${total}$ `
+let totalPrice = document.querySelector(".totalPrice").innerHTML = `Total : $${total}.00 `
 let removeButton = document.querySelectorAll(".removeButton")
 for (let i = 0; i < removeButton.length; i++) {
     removeButton[i].addEventListener("click", function () {

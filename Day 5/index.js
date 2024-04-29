@@ -37,8 +37,8 @@ for (let i = 0; i < button.length; i++) {
     let k = button[i];
     k.addEventListener("click", function () {
         location.href = "product.html"
-        localStorage.setItem("typeProduct", identityProduct[i].textContent)
-        localStorage.setItem("img", changeImg[i].src)
+        localStorage.setItem("typeProduct", data[i].nameProduct)
+        localStorage.setItem("img", data[i].img)
         localStorage.setItem("price", data[i].price)
     })
 }
