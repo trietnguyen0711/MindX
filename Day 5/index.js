@@ -1,8 +1,8 @@
 let html = ""
-for (let m = 0; m < data.length; m++) {
-    let img = data[m].img;
-    let nameProduct = data[m].nameProduct;
-    let price = data[m].price;
+for (let i = 0; i < data.length; i++) {
+    let img = data[i].img;
+    let nameProduct = data[i].nameProduct;
+    let price = data[i].price;
     console.log(img)
     html += `
     <div class="size-products bor-rad-nor p-3 color-black me-5 bg-white">
@@ -39,6 +39,6 @@ for (let i = 0; i < button.length; i++) {
         location.href = "product.html"
         localStorage.setItem("typeProduct", identityProduct[i].textContent)
         localStorage.setItem("img", changeImg[i].src)
-        localStorage.setItem("price", price[i].textContent)
+        localStorage.setItem("price", data[i].price)
     })
 }

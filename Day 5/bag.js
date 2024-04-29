@@ -4,17 +4,18 @@ amountBag.innerHTML = `Products : ${amount}`
 let shoppingBag = document.querySelector(".shoppingBag")
 let arrayProduct = JSON.parse(localStorage.getItem("arrayProduct"))
 let addProduct = ""
+let total = 0
 for (let i = 0; i < arrayProduct.length; i++) {
     addProduct += `
-            <div class="row mt-5">
-            <div class="col-12 bg-gray" style="height: 3px;"></div>
+    <div class="row mt-5">
+    <div class="col-12 bg-gray" style="height: 3px;"></div>
             <img class="col-lg-3 col-4"
             src="${arrayProduct[i].img}">
             <div class="col-lg-9 col-12">
             <div class="d-flex-between w-100 h-50">
             <h4 class="w-50">${arrayProduct[i].nameProduct}</h4>
             <h4>1</h4>
-            <h4>${arrayProduct[i].price}</h4>
+            <h4>$${arrayProduct[i].price}.00</h4>
             </div>
             <div class="w-100 h-50 row ">
             <div class="col-6 h-50">Pay 0% APR for 12 months</div>
@@ -29,6 +30,7 @@ for (let i = 0; i < arrayProduct.length; i++) {
             `
 }
 shoppingBag.innerHTML = addProduct
+let totalPrice = document.querySelector(".totalPrice").innerHTML = `Total : ${total}$ `
 let removeButton = document.querySelectorAll(".removeButton")
 for (let i = 0; i < removeButton.length; i++) {
     removeButton[i].addEventListener("click", function () {
