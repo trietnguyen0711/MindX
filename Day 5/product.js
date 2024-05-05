@@ -1,37 +1,50 @@
-let changeableImg = document.querySelectorAll(".changeableImg")
-let changeableContent = document.querySelector(".changeableContent")
-let bagContent = document.querySelector(".bagContent")
-let btn = document.querySelector(".btn")
-let countBag = localStorage.getItem("amountBag")
-countBag = parseInt(countBag)
-bagContent.innerHTML = `${countBag}`
+let amountProduct = document.querySelector(".amountProduct")
+let nameProduct = document.querySelector(".nameProduct").innerHTML = `
+<h6 style="color:red">New</h6>
+<h3 class="w-100">${localStorage.getItem("nameProduct")}</h3>
+<h5>$${localStorage.getItem("price")}.00</h5>
+`
+let imgProduct = document.querySelector(".imgProduct").innerHTML = `
+<img class="bor-rad-nor h-100"
+    src="${localStorage.getItem("img")}"
+    alt="">
+`
 let inforProduct = {
-    nameProduct: localStorage.getItem("typeProduct"),
     price: localStorage.getItem("price"),
-    img: localStorage.getItem("img")
+    img: localStorage.getItem("img"),
+    name: localStorage.getItem("nameProduct"),
+    id: localStorage.getItem("id")
 }
-console.log(inforProduct)
+let btn = document.querySelector(".btn")
 btn.addEventListener("click", function () {
-    countBag = countBag + 1
-    bagContent.innerHTML = `${countBag}`
-    localStorage.setItem("amountBag", countBag)
-    if (localStorage.getItem("arrayProduct")) {
-        let arrayProduct = JSON.parse(localStorage.getItem("arrayProduct"))
-        arrayProduct.push(inforProduct)
-        localStorage.setItem("arrayProduct", JSON.stringify(arrayProduct))
+    if (localStorage.getItem("cart")) {
+        let localCart = JSON.parse(localStorage.getItem("cart"))
+        for (let i = 0; i < localCart.length; i++) {
+            if (inforProduct.id == localCart[i].id) {
+                alert("You have already chosen this one")
+                return;
+            }
+        }
+        localCart.push(inforProduct)
+        localStorage.setItem("cart", JSON.stringify(localCart))
     }
     else {
-        let arrayProduct = []
-        arrayProduct.push(inforProduct)
-        localStorage.setItem("arrayProduct", JSON.stringify(arrayProduct))
+        let cart = []
+        cart.push(inforProduct)
+        localStorage.setItem("cart", JSON.stringify(cart))
+    }
+    if (localStorage.getItem("cart")) {
+        let cart = JSON.parse(localStorage.getItem("cart"))
+        amountProduct.innerText = cart.length
+    }
+    else {
+        amountProduct.innerText = 0
     }
 })
-changeableContent.innerHTML = `
-<h6 style="color:red">New</h6>
-<h3 class="w-100">${localStorage.getItem("typeProduct")}</h3>
-<h5>$${localStorage.getItem("price")}.00</h5>`
-for (let i = 0; i < changeableImg.length; i++) {
-    changeableImg[i].innerHTML = `<img class="bor-rad-nor h-100"
-    src="${localStorage.getItem("img")}"
-    alt="">`
+if (localStorage.getItem("cart")) {
+    let cart = JSON.parse(localStorage.getItem("cart"))
+    amountProduct.innerText = cart.length
+}
+else {
+    amountProduct.innerText = 0
 }
