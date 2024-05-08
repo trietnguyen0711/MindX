@@ -5,7 +5,7 @@ for (let i = 0; i < data.length; i++) {
         img: data[i].img,
         nameProduct: data[i].nameProduct,
         price: data[i].price,
-        id: data[i].id
+        id: data[i].id,
     }
     html += `<div class="size-products bor-rad-nor p-3 color-black me-5 bg-white">
     <img class="h-75 w-100 bor-rad-nor changeImg"
@@ -30,18 +30,50 @@ function buttonInfor(id) {
             }
         }
     }
+    function updateAmount() {
+        if (localStorage.getItem("cart")) {
+            let cart = JSON.parse(localStorage.getItem("cart"))
+            let amountBag = 0
+            for (let i = 0; i < cart.length; i++) {
+                amountBag += cart[i].amount
+                amountProduct.innerText = amountBag
+            }
+            localStorage.setItem("cart", JSON.stringify(cart))
+        }
+
+    }
     let product = findProduct(id)
     localStorage.setItem("img", product.img)
     localStorage.setItem("nameProduct", product.nameProduct)
     localStorage.setItem("price", product.price)
     localStorage.setItem("id", product.id)
     location.href = "product.html"
+    if (localStorage.getItem("cart")) {
+        let cart = JSON.parse(localStorage.getItem("cart"))
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].id == product.id) {
+                localStorage.setItem("amountEveryProduct", cart[i].amount)
+                return
+            }
+            else {
+                localStorage.setItem("amountEveryProduct", 1)
+            }
+        }
+    }
+    else {
+        localStorage.setItem("amountEveryProduct", 1)
+    }
 }
 let amountProduct = document.querySelector(".amountProduct")
-if (localStorage.getItem("cart")) {
-    let cart = JSON.parse(localStorage.getItem("cart"))
-    amountProduct.innerText = cart.length
-}
-else {
-    amountProduct.innerText = 0
+updateAmount()
+function updateAmount() {
+    if (localStorage.getItem("cart")) {
+        let cart = JSON.parse(localStorage.getItem("cart"))
+        let amountBag = 0
+        for (let i = 0; i < cart.length; i++) {
+            amountBag += JSON.parse(cart[i].amount)
+            amountProduct.innerText = amountBag
+        }
+        localStorage.setItem("cart", JSON.stringify(cart))
+    }
 }

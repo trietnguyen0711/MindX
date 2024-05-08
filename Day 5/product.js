@@ -1,3 +1,4 @@
+
 let amountProduct = document.querySelector(".amountProduct")
 let nameProduct = document.querySelector(".nameProduct").innerHTML = `
 <h6 style="color:red">New</h6>
@@ -13,7 +14,8 @@ let inforProduct = {
     price: localStorage.getItem("price"),
     img: localStorage.getItem("img"),
     name: localStorage.getItem("nameProduct"),
-    id: localStorage.getItem("id")
+    id: localStorage.getItem("id"),
+    amount: JSON.parse(localStorage.getItem("amountEveryProduct")),
 }
 let btn = document.querySelector(".btn")
 btn.addEventListener("click", function () {
@@ -21,8 +23,11 @@ btn.addEventListener("click", function () {
         let localCart = JSON.parse(localStorage.getItem("cart"))
         for (let i = 0; i < localCart.length; i++) {
             if (inforProduct.id == localCart[i].id) {
-                alert("You have already chosen this one")
-                return;
+                localCart.splice(i, 1);
+                inforProduct.amount += 1
+                localCart.push(inforProduct)
+                localStorage.setItem("cart", JSON.stringify(localCart))
+                return
             }
         }
         localCart.push(inforProduct)
@@ -33,18 +38,20 @@ btn.addEventListener("click", function () {
         cart.push(inforProduct)
         localStorage.setItem("cart", JSON.stringify(cart))
     }
+    updateAmount()
+})
+btn.addEventListener("click", function () {
+    updateAmount()
+})
+updateAmount()
+function updateAmount() {
     if (localStorage.getItem("cart")) {
         let cart = JSON.parse(localStorage.getItem("cart"))
-        amountProduct.innerText = cart.length
+        let amountBag = 0
+        for (let i = 0; i < cart.length; i++) {
+            amountBag += JSON.parse(cart[i].amount)
+            amountProduct.innerText = amountBag
+        }
+        localStorage.setItem("cart", JSON.stringify(cart))
     }
-    else {
-        amountProduct.innerText = 0
-    }
-})
-if (localStorage.getItem("cart")) {
-    let cart = JSON.parse(localStorage.getItem("cart"))
-    amountProduct.innerText = cart.length
-}
-else {
-    amountProduct.innerText = 0
 }
