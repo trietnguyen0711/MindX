@@ -158,3 +158,49 @@
     overflow-y: hidden;
     overflow-x: scroll;
 }
+
+.size-square {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+.d-flex-center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.d-flex-between {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.d-flex-around {
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+}
+
+.size-input {
+    width: 100%;
+    height: 50px;
+}
+
+.text-link {
+    text-decoration: underline;
+    color: aqua;
+}
+
+.bor-input {
+    border-radius: 20px !important;
+}
+
+.fs-7 {
+    font-size: 30px;
+}
+
+.fs-8 {
+    font-size: 50px;
+}

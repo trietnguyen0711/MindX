@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -30,7 +30,6 @@
                 <a class="fs-6 headList-a-nor cur-pointer">Support</a>
             </ul>
             <div class="col-lg-1 col-sm-3 col-5 h-100 d-flex-between">
-                <div class="col-1 cur-pointer signUp">sign up</div>
                 <div class="col-3 cur-pointer position-relative">
                     <p class="position-absolute bor-rad-nor bg-info d-flex-center top-0 end-0 amountProduct"
                         style="color:blue;">0
@@ -43,49 +42,31 @@
             </div>
         </div>
     </div>
-    <div class="container mx-auto row mt-5 px-sm-5">
-        <div class="col-xl-6 col-12 d-xl-none">
-            <div class="d-flex-center h-75">
+    <div class="container-fluid bg-secondary d-flex-center" style="height: 800px;">
+        <div class="container p-sm-5 p-sm-1 bor-input"
+            style="width: 500px; height: 600px; background-color: rgba(255, 255, 255, 0.856);">
+            <h1 class="text-center mt-sm-0 mt-4">Welcome back</h1>
+            <div class="w-100 d-flex-center my-3">
+                <i class="fa-solid fa-layer-group fs-8"></i>
             </div>
-        </div>
-        <div class="col-xl-6 col-12">
-            <div class="nameProduct w-100"></div>
-            <a href="#" class="headList-a-nor">Get 3% Daily Cash with Apple card</a>
-            <!-- if(localStorage==iphone){innerHtml.price=`(content below)`} -->
-            <h5>Color - Soft Mint</h5> <!-- Use javascript to change the type of phone -->
-            <container class="w-75 row ms-1" style="height: 40px;">
-                <div class="size-circle cur-pointerC bg-danger m-1"></div>
-                <div class="size-circle cur-pointerC bg-primary m-1"></div>
-                <div class="size-circle cur-pointerC bg-secondary m-1"></div>
-                <div class="size-circle cur-pointerC bg-success m-1"></div>
-                <div class="size-circle cur-pointerC bg-info m-1"></div>
-                <div class="size-circle cur-pointerC bg-warning m-1"></div>
-                <div class="line mt-3"></div>
-            </container>
-            <!-- if(localStorage==iphone){innerHtml.price=`(content below)`} -->
-            <p class="w-100 mt-5">To purchase with monthly pricing, add this item to your bag and choose to check out
-                with
-                Apple Card Monthly Installments.footnote◊</p>
-            <p class="mt-5 mb-0"><i class="fa-brands fa-shopify"></i> Order now. Pick up, in store:</p>
-            <p>Today at Apple Easton Town Center</p>
-            <p class="w-75"><i class="fa-solid fa-truck"></i> Today from Store 10:30a.m. to 12:30p.m. — $9.00</p>
-            <p>Tue, Apr 30 - free</p> <!-- Time command in Javascript ? -->
-            <button type="button" class="btn btn-primary w-75">Add to bag</button>
-            <h6 class="mt-5 ">Need a moment?</h6>
-            <p class="mb-0">Keep all your selections by saving this device to Your Saves, then come back anytime and
-                pick up right
-                where you left off.</p>
-            <a href="#" class="headList-a-nor" style="color: black;"><i class="fa-regular fa-bookmark"></i> Save for
-                later</a>
-            <div class="line mt-5"></div>
-            <a href="#" class="headList-a-nor" style="color: black;"><i class="fa-solid fa-headphones-simple"></i>
-                Contact us</a>
-        </div>
-        <div class="col-xl-6 col-12 d-xl-block d-none imgProduct">
+            <h4 class="text-center">Sign in to your account</h4>
+            <h5 class="mt-5">Email Address</h5>
+            <input type="text" placeholder="Your Email" class="size-input bor-input px-3">
+            <p class="errorEmail" style="color:red"></p>
+            <h3 style="color:red"></h3>
+            <h5 class="mt-3">Password</h5>
+            <input type="text" placeholder="Your Password" class="size-input bor-input px-3">
+            <p class="errorPassword" style="color:red"></p>
+            <h3 style="color:red"></h3>
+            <div class="d-flex-between size-input">
+                <p class="m-0">Remember me</p>
+                <a class="text-link">Forgot your Password</a>
+            </div>
+            <div class="size-input btn btn-warning bor-input d-flex-center">Sign in</div>
         </div>
     </div>
-    <!-- Bootstraps 5 -->
-    <script src="product.js"></script>
+    <!-- Bootstrap 5 + javascript -->
+    <script src="sign.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

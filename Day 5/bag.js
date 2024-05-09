@@ -63,7 +63,7 @@ function inputValue() {
     for (let i = 0; i < localCart.length; i++) {
         inputAmount[i].value = localCart[i].amount
         inputAmount[i].addEventListener("input", function () {
-            if (inputAmount[i].value <= localCart[i].stock) {
+            if (inputAmount[i].value <= JSON.parse(localCart[i].stock)) {
                 localCart[i].amount = inputAmount[i].value
                 localStorage.setItem("cart", JSON.stringify(localCart))
                 updateTotalPrice()
@@ -90,3 +90,10 @@ function removeButtonCart(id) {
     // updateTotalPrice()
     location.reload();
 }
+let signUp = document.querySelector(".signUp")
+if (localStorage.getItem("user")) {
+    signUp.innerHTML = `<i class="fa-solid fa-user cur-pointer"></i> ${localStorage.getItem("user")}`
+}
+signUp.addEventListener("click", function () {
+    location.href = "sign.html"
+})

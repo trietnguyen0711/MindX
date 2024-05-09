@@ -79,3 +79,10 @@ function updateAmount() {
         localStorage.setItem("cart", JSON.stringify(cart))
     }
 }
+let signUp = document.querySelector(".signUp")
+if (localStorage.getItem("user")) {
+    signUp.innerHTML = `<i class="fa-solid fa-user cur-pointer"></i> ${localStorage.getItem("user")}`
+}
+signUp.addEventListener("click", function () {
+    location.href = "sign.html"
+})
