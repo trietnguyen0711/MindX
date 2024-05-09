@@ -5,7 +5,7 @@ let input = document.querySelectorAll("input")
 let inputEmail = input[0]
 let inputPassword = input[1]
 const account = {
-    email: "Kaka",
+    email: "Triet",
     password: "ITCT2",
 }
 btn.addEventListener("click", function () {
@@ -31,8 +31,18 @@ btn.addEventListener("click", function () {
         errorPassword.innerText = ""
         errorPassword.innerText = "Please write your password"
     }
+    else if (inputEmail.value == account.email && inputPassword.value != "") {
+        errorEmail.innerText = ""
+        errorPassword.innerText = ""
+        errorPassword.innerText = "Incorrect password"
+    }
+    else if (inputEmail.value != "" && inputPassword.value == account.password) {
+        errorEmail.innerText = ""
+        errorPassword.innerText = ""
+        errorEmail.innerText = "Incorrect email"
+    }
     else {
-        errorEmail.innerText = "Incorrect email or password"
-        errorPassword.innerText = "Incorrect email or password"
+        errorEmail.innerText = "Incorrect email and password"
+        errorPassword.innerText = "Incorrect email and password"
     }
 })
