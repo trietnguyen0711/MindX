@@ -25,7 +25,7 @@ for (let i = 0; i < localCart.length; i++) {
             <div class="col-lg-9 col-12">
             <div class="d-flex-between w-100 h-50">
             <h4 class="w-50">${localCart[i].name}</h4>
-            <input type="number" class="inputAmount" min="1" style="width:30px">
+            <input type="number" class="inputAmount" min="1" style="width:40px">
             <h4>$${localCart[i].price}.00</h4>
             </div>
             <div class="w-100 h-50 row ">
@@ -63,22 +63,30 @@ function inputValue() {
     for (let i = 0; i < localCart.length; i++) {
         inputAmount[i].value = localCart[i].amount
         inputAmount[i].addEventListener("input", function () {
-            localCart[i].amount = inputAmount[i].value
-            localStorage.setItem("cart", JSON.stringify(localCart))
-            updateTotalPrice()
-            updateAmount()
+            if (inputAmount[i].value <= localCart[i].stock) {
+                localCart[i].amount = inputAmount[i].value
+                localStorage.setItem("cart", JSON.stringify(localCart))
+                updateTotalPrice()
+                updateAmount()
+            }
+            else {
+                alert("Out of stock")
+                inputAmount[i].value = localCart[i].amount
+                return
+            }
         })
     }
 }
+
 function removeButtonCart(id) {
     for (let i = 0; i < localCart.length; i++) {
         if (id == localCart[i].id) {
             localCart.splice(i, 1)
-            localStorage.setItem("cart", JSON.stringify(localCart))
-            updateAmount()
-            inputValue()
-            updateTotalPrice()
-            return
         }
     }
+    localStorage.setItem("cart", JSON.stringify(localCart))
+    // updateAmount()
+    // inputValue()           Tại sao reload lại thành công mà gọi lại mấy cái function không thành công ????
+    // updateTotalPrice()
+    location.reload();
 }

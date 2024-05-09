@@ -6,6 +6,7 @@ for (let i = 0; i < data.length; i++) {
         nameProduct: data[i].nameProduct,
         price: data[i].price,
         id: data[i].id,
+        stock: data[i].stock
     }
     html += `<div class="size-products bor-rad-nor p-3 color-black me-5 bg-white">
     <img class="h-75 w-100 bor-rad-nor changeImg"
@@ -47,6 +48,7 @@ function buttonInfor(id) {
     localStorage.setItem("nameProduct", product.nameProduct)
     localStorage.setItem("price", product.price)
     localStorage.setItem("id", product.id)
+    localStorage.setItem("stock", product.stock)
     location.href = "product.html"
     if (localStorage.getItem("cart")) {
         let cart = JSON.parse(localStorage.getItem("cart"))

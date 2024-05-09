@@ -16,6 +16,7 @@ let inforProduct = {
     name: localStorage.getItem("nameProduct"),
     id: localStorage.getItem("id"),
     amount: JSON.parse(localStorage.getItem("amountEveryProduct")),
+    stock: localStorage.getItem("stock")
 }
 let btn = document.querySelector(".btn")
 btn.addEventListener("click", function () {
@@ -23,6 +24,10 @@ btn.addEventListener("click", function () {
         let localCart = JSON.parse(localStorage.getItem("cart"))
         for (let i = 0; i < localCart.length; i++) {
             if (inforProduct.id == localCart[i].id) {
+                if (inforProduct.amount == inforProduct.stock) {
+                    alert("Out of stock")
+                    return
+                }
                 localCart.splice(i, 1);
                 inforProduct.amount += 1
                 localCart.push(inforProduct)
