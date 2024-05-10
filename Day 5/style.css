@@ -50,7 +50,7 @@
 }
 
 .color-white {
-    color: white;
+    color: white !important;
 }
 
 .color-black {
@@ -203,4 +203,12 @@
 
 .fs-8 {
     font-size: 50px;
+}
+
+.return:hover {
+    color: aquamarine !important
+}
+
+.review:hover {
+    color: aquamarine !important
 }

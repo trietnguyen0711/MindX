@@ -14,6 +14,7 @@ btn.addEventListener("click", function () {
         errorPassword.innerText = ""
         location.href = "index.html"
         localStorage.setItem("user", account.email)
+        localStorage.setItem("password", account.password)
     }
     else if (inputEmail.value == "" && inputPassword.value == "") {
         errorEmail.innerText = ""

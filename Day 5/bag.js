@@ -93,7 +93,12 @@ function removeButtonCart(id) {
 let signUp = document.querySelector(".signUp")
 if (localStorage.getItem("user")) {
     signUp.innerHTML = `<i class="fa-solid fa-user cur-pointer"></i> ${localStorage.getItem("user")}`
+    signUp.addEventListener("click", function () {
+        location.href = "account.html"
+    })
 }
-signUp.addEventListener("click", function () {
-    location.href = "sign.html"
-})
+else {
+    signUp.addEventListener("click", function () {
+        location.href = "sign.html"
+    })
+}
