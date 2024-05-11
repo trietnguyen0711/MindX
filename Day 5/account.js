@@ -26,7 +26,7 @@ let translatePage = document.querySelectorAll(".translatePage")
 let underlineDiv = document.querySelectorAll(".underlineDiv")
 let translateInfor = document.querySelector(".translateInfor")
 function translatePage1() {
-    translatePage.innerHTML = `
+    translateInfor.innerHTML = `
     <h4 class="mt-4">Your Information</h4>
         <div class="d-flex">
             <i class="fa-regular fa-user me-3 d-flex-center"></i>
@@ -69,8 +69,7 @@ function translatePage2() {
         `
 }
 translatePage[0].addEventListener("click", function () {
-    location.reload()
-    // translatePage1()
+    translatePage1()
 })
 translatePage[1].addEventListener("click", function () {
     translatePage2()
