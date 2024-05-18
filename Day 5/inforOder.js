@@ -113,6 +113,11 @@ if (localStorage.getItem("cart")) {
             }
             let check = document.querySelectorAll(".check")
             console.log(check)
+            // Kiểm tra đã chọn hình thức thanh toán chưa thông qua số lượng thẻ input tồn tại trên website tại thời điểm đó
+            if (check.length < 2) {
+                alert("please choose your receiving way")
+                return
+            }
             for (let i = 0; i < check.length; i++) {
                 if (check[i].value == "") {
                     alert("Please write your order information")
@@ -123,7 +128,7 @@ if (localStorage.getItem("cart")) {
             localCart = []
             localStorage.setItem("cart", localCart)
             localStorage.setItem("listOrder", JSON.stringify(listOrder))
-            // location.href = "index.html"
+            location.href = "index.html"
             alert("Order successfully")
         }
     }
