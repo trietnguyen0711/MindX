@@ -205,10 +205,19 @@
     font-size: 50px;
 }
 
+.bg-aqua {
+    background-color: aqua !important;
+}
+
 .return:hover {
     color: aquamarine !important
 }
 
 .review:hover {
     color: aquamarine !important
+}
+
+.p-alert {
+    color: red;
+    margin: 0px 0px 12px 173px;
 }

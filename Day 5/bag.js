@@ -102,3 +102,12 @@ else {
         location.href = "sign.html"
     })
 }
+let orderProduct = document.querySelector(".orderProduct").addEventListener("click", function () {
+    if (localStorage.getItem("user")) {
+        location.href = "inforOder.html"
+    }
+    else {
+        alert("Please sign in")
+        location.href = "sign.html"
+    }
+})

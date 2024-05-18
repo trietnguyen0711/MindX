@@ -69,9 +69,13 @@ function translatePage2() {
         `
 }
 translatePage[0].addEventListener("click", function () {
+    underlineDiv[0].classList.remove("d-none")
+    underlineDiv[1].classList.add("d-none")
     translatePage1()
 })
 translatePage[1].addEventListener("click", function () {
+    underlineDiv[1].classList.remove("d-none")
+    underlineDiv[0].classList.add("d-none")
     translatePage2()
 })
 

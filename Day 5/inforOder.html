@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your order</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://www.apple.com/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container-fluid bg-white">
+        <div class="container mx-auto row d-flex-between" style="height: 70px;">
+            <div class="col-1 h-100 d-flex-center fs-1 cur-pointer"><a href="./index.html"
+                    class="fa-brands fa-apple headList-a-nor" style="color: black;"></a></div>
+            <ul class="list-none d-flex-between col-10 m-0 d-lg-flex d-none">
+                <a class="fs-6 headList-a-nor cur-pointer cur-pointer">Store</a>
+                <a class="fs-6 headList-a-nor cur-pointer">Mac</a>
+                <a class="fs-6 headList-a-nor cur-pointer">iPad</a>
+                <a class="fs-6 headList-a-nor cur-pointer">iPhone</a>
+                <a class="fs-6 headList-a-nor cur-pointer">Watch</a>
+                <a class="fs-6 headList-a-nor cur-pointer">Vision</a>
+                <a class="fs-6 headList-a-nor cur-pointer">AirPods</a>
+                <a class="fs-6 headList-a-nor cur-pointer">TV & Home</a>
+                <a class="fs-6 headList-a-nor cur-pointer">Entertainment</a>
+                <a class="fs-6 headList-a-nor cur-pointer">Support</a>
+            </ul>
+            <div class="col-lg-1 col-sm-3 col-5 h-100 d-flex-between">
+                <div class="col-lg-1 col-9 cur-pointer signUp">sign in</div>
+                <div class="col-3 cur-pointer position-relative">
+                </div>
+                <div class="col-1 d-lg-none d-block cur-pointer"><i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto row d-flex-between mt-5">
+        <div class="col-5">
+            <h4 class="px-4">Your Information</h4>
+            <ul class="list-none">
+                <li class="d-flex-between px-4 w-75">
+                    <p class="mb-0">Your name :</p>
+                    <input type="text" class="px-2 inforName w-50 rounded check">
+                </li>
+                <p class="p-alert fillAlert"></p>
+                <li class="d-flex-between px-4 w-75">
+                    <p class="mb-0">Phone number :</p>
+                    <input type="text" class="px-2 inforPhone w-50 rounded check">
+                </li>
+                <p class="p-alert fillAlert"></p>
+                <li class="d-flex-between px-4 w-75">
+                    <p class="mb-0">Your note:</p>
+                    <input type="text" class="px-2 inforNote w-50 rounded">
+                </li>
+            </ul>
+            <h4 class="px-4 mt-3">How to receive your order?</h4>
+            <div class="border-2">
+                <div class="d-flex ">
+                    <div class="w-50 d-flex-center border border-2 py-3 receive">
+                        <i class="fa-solid fa-store"></i>
+                        <p class="ms-2 fs-5 mb-0 cur-pointer">Receive in store</p>
+                    </div>
+                    <div class="w-50 d-flex-center border border-2 py-3 border-start-0 delivery">
+                        <i class="fa-solid fa-truck"></i>
+                        <p class="ms-2 fs-5 mb-0 cur-pointer">Delivery</p>
+                    </div>
+                </div>
+                <div class="d-flex exchange">
+                    <div class="border border-2 py-3 px-2 w-100 border-top-0">
+                        <div class="d-flex-between w-100 check">
+                            <p class="ms-2 fs-6 mb-3">The nearest store:</p>
+                            <input type="text" class="px-2 w-50 inforStore bor-rad-nor">
+                        </div>
+                        <div class="d-flex-between w-100 check">
+                            <p class="ms-2 fs-6 mb-3">Your shopping date:</p>
+                            <input type="date" class="px-2 w-50 inforDate bor-rad-nor">
+                        </div>
+                    </div>
+                    <!-- Changed -->
+                    <!-- <div class="border border-2 py-3 px-2 w-100 border-top-0">
+                    <div class="d-flex-between w-100">
+                            <p class="ms-2 fs-6 mb-3">Province/City:</p>
+                            <input type="text" class="px-2 inforCity bor-rad-nor">
+                        </div>
+                        <div class="d-flex-between w-100">
+                            <p class="ms-2 fs-6 mb-3">District:</p>
+                            <input type="text" class="px-2 inforDistrict bor-rad-nor">
+                        </div>
+                        <div class="d-flex-between w-100">
+                            <p class="ms-2 fs-6 mb-3">Your address:</p>
+                            <input type="text" class="px-2 inforAddress bor-rad-nor">
+                        </div>
+                    </div> -->
+                    <!-- Changed -->
+                </div>
+            </div>
+            <div class="w-100 d-flex-center">
+                <button type="button" class="btn btn-info w-50 mx-auto rounded-pill mt-3 orderButton">Order
+                    Now!</button>
+            </div>
+        </div>
+
+        <div class="col-6 px-2" style="height: 500px;">
+            <!-- Bag.js -->
+            <h4 class="">Your Products</h4>
+            <div class="d-flex">
+                <h5 class="me-2">Total Price : </h5>
+                <h5 class="totalPrice"></h5>
+            </div>
+            <div class="listProduct">
+                <!-- <div class="row mt-3">
+                    <div class="col-12 bg-gray" style="height: 3px;"></div>
+                    <img class="col-lg-3 col-4"
+                        src=${localCart[i].img}>
+                    <div class="col-lg-9 col-12">
+                        <div class="d-flex-between w-100 h-50">
+                            <h6 class="w-50">${localCart[i].name}</h6>
+                            <input type="number" class="inputAmount" value="7" style="width:40px" disabled>
+                            <h6>${localCart[i].price}</h6>
+                        </div>
+                        <div class="w-100 h-50 row ">
+                            <h6 class="col-6 h-50">Pay 0% APR for 12 months</h6>
+                            <h6 class="col-6 h-50 d-flex pe-0" style="justify-content: end ;">$4.92/mo.</h6>
+                            <div class="col-6 h-50"></div>
+                        </div>
+                        <div class="col-12 bg-gray" style="height: 3px;"></div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- Bag.js -->
+        </div>
+    </div>
+    <!-- Bootstraps 5 -->
+    <script src="inforOder.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
