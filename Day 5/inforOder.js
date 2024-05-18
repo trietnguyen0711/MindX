@@ -100,20 +100,17 @@ if (localStorage.getItem("cart")) {
         //những đơn hàng thành công được push vào chuỗi
         // Hai trường hợp : đã tồn tại và chưa tồn tại
         let orderButton = document.querySelector(".orderButton")
-        if (localStorage.getItem("listOrder")) {
-            listOrder = JSON.parse(localStorage.getItem("listOrder"))
-            orderButton.addEventListener("click", function () {
-                orderNow()
-            })
-        }
-        else {
-            let listOrder = []
-            orderButton.addEventListener("click", function () {
-                orderNow()
-            })
-        }
-        function orderNow() {
+        orderButton.addEventListener("click", function () {
+            checkInput()
+        })
+        function checkInput() {
             //check input rỗng
+            if (localStorage.getItem("listOrder")) {
+                listOrder = JSON.parse(localStorage.getItem("listOrder"))
+            }
+            else {
+                listOrder = []
+            }
             let check = document.querySelectorAll(".check")
             console.log(check)
             for (let i = 0; i < check.length; i++) {
@@ -127,7 +124,7 @@ if (localStorage.getItem("cart")) {
             localStorage.setItem("cart", localCart)
             localStorage.setItem("listOrder", JSON.stringify(listOrder))
             // location.href = "index.html"
-            // alert("Order successfully")
+            alert("Order successfully")
         }
     }
 }
