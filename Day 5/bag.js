@@ -103,11 +103,17 @@ else {
     })
 }
 let orderProduct = document.querySelector(".orderProduct").addEventListener("click", function () {
-    if (localStorage.getItem("user")) {
-        location.href = "inforOder.html"
+    localCart = JSON.parse(localStorage.getItem("cart"))
+    if (localCart == 0) {
+        alert("Please choose your favorite products before ordering")
     }
     else {
-        alert("Please sign in")
-        location.href = "sign.html"
+        if (localStorage.getItem("user")) {
+            location.href = "inforOder.html"
+        }
+        else {
+            alert("Please sign in")
+            location.href = "sign.html"
+        }
     }
 })
