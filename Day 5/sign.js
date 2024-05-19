@@ -108,18 +108,18 @@ btn.addEventListener("click", function () {
                 }
             }
             // function giúp thêm tạo và thêm account vào listAccount
-            createAcount1()
+            createAcount()
         }
         else {
             let listAccount = []
             // function giúp thêm tạo và thêm account vào listAccount
-            createAcount1()
+            createAcount()
         }
     }
 
 })
-function createAcount1() {
-    // Chưa nhập thông tin email và password đăng kí
+function createAcount() {
+    //Kiểm tra coi đã nhập đầy đủ thông tin email và password đăng kí
     if (inputEmail.value == "" && inputPassword.value != "") {
         errorEmail.innerText = ""
         errorPassword.innerText = ""
@@ -161,13 +161,3 @@ function createAcount1() {
         location.reload()
     }
 }
-// function createAcount2() {
-//     // Tìm lại công thức push object dạng này đi cu :))
-//     let account.push{
-//         nameAccount: inputEmail.value,
-//         phoneNumber: inputPassword.value,
-//     }
-//     listAccount.push(account)
-//     localStorage.setItem("listAccount", JSON.stringify(listAccount))
-// }
-
