@@ -31,7 +31,6 @@ if (localStorage.getItem("cart")) {
         `
         delivery.classList.remove("bg-aqua")
         receive.classList.add("bg-aqua")
-        order()
     })
     delivery.addEventListener("click", function () {
         exchange.innerHTML = `
@@ -52,7 +51,6 @@ if (localStorage.getItem("cart")) {
         `
         receive.classList.remove("bg-aqua")
         delivery.classList.add("bg-aqua")
-        order()
     })
     let listProduct = document.querySelector(".listProduct")
     let totalPrice = document.querySelector(".totalPrice")
@@ -84,17 +82,6 @@ if (localStorage.getItem("cart")) {
     }
     totalPrice.innerHTML = `$${total}.00`
     listProduct.innerHTML = html
-    // function checkInput() {
-    //     let check = document.querySelectorAll(".check")
-    //     let fillAlert = document.querySelectorAll(".fillAlert")
-    //     for (let i = 0; i < check.length; i++) {
-    //         if (check[i].value == "") {
-    //             fillAlert[i].innerHTML = `
-    //             Please fill in
-    //             `
-    //         }
-    //     }
-    // }
     order()
     function order() {
         //những đơn hàng thành công được push vào chuỗi
@@ -112,7 +99,6 @@ if (localStorage.getItem("cart")) {
                 listOrder = []
             }
             let check = document.querySelectorAll(".check")
-            console.log(check)
             // Kiểm tra đã chọn hình thức thanh toán chưa thông qua số lượng thẻ input tồn tại trên website tại thời điểm đó
             if (check.length < 2) {
                 alert("please choose your receiving way")
