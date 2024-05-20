@@ -122,11 +122,11 @@ if (localStorage.getItem("cart")) {
                         updateListOrder(listOrder)
                     }
                     function updateListOrder(listOrder) {
-                        // Tạo lại tài khoản có thêm biến listOrder
+                        // Tạo lại tài khoản có thêm biến listOrder và totalPrict
                         let account = {
                             email: listAccount[i].email,
                             password: listAccount[i].password,
-                            listOrder: listOrder
+                            listOrder: listOrder,
                         }
                         // Push vào listAccount[i] đã được xác định đồng thời xóa thằng cũ
                         listAccount.splice(i, 1)
