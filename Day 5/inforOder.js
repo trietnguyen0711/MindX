@@ -84,38 +84,64 @@ if (localStorage.getItem("cart")) {
     listProduct.innerHTML = html
     order()
     function order() {
-        //những đơn hàng thành công được push vào chuỗi
-        // Hai trường hợp : đã tồn tại và chưa tồn tại
         let orderButton = document.querySelector(".orderButton")
         orderButton.addEventListener("click", function () {
             checkInput()
         })
         function checkInput() {
-            //check input rỗng
-            if (localStorage.getItem("listOrder")) {
-                listOrder = JSON.parse(localStorage.getItem("listOrder"))
-            }
-            else {
-                listOrder = []
-            }
+            // Hai trường hợp : đã tồn tại và chưa tồn tại
             let check = document.querySelectorAll(".check")
             // Kiểm tra đã chọn hình thức thanh toán chưa thông qua số lượng thẻ input tồn tại trên website tại thời điểm đó
             if (check.length < 2) {
                 alert("please choose your receiving way")
                 return
             }
+            //check input rỗng
             for (let i = 0; i < check.length; i++) {
                 if (check[i].value == "") {
                     alert("Please write your order information")
                     return
                 }
             }
-            listOrder.push(localCart)
-            localCart = []
-            localStorage.setItem("cart", localCart)
-            localStorage.setItem("listOrder", JSON.stringify(listOrder))
-            location.href = "index.html"
-            alert("Order successfully")
+            // Đơn hàng thành công được push vào tài khoản đang đăng nhập
+            // Xác định tài khoản hiện tại và push vào listAccount[i] đã được xác định
+            let user = localStorage.getItem("user")
+            let listAccount = JSON.parse(localStorage.getItem("listAccount"))
+            for (let i = 0; i < listAccount.length; i++) {
+                if (listAccount[i].email == user) {
+                    // Kiểm tra tk này trước đây có đặt đơn hàng nào chưa ?
+                    if (listAccount[i].listOrder) {
+                        //những đơn hàng thành công được push vào chuỗi
+                        let listOrder = listAccount[i].listOrder
+                        listOrder.push(localCart)
+                        updateListOrder(listOrder)
+                    }
+                    else {
+                        let listOrder = []
+                        listOrder.push(localCart)
+                        updateListOrder(listOrder)
+                    }
+                    function updateListOrder(listOrder) {
+                        // Tạo lại tài khoản có thêm biến listOrder
+                        let account = {
+                            email: listAccount[i].email,
+                            password: listAccount[i].password,
+                            listOrder: listOrder
+                        }
+                        // Push vào listAccount[i] đã được xác định đồng thời xóa thằng cũ
+                        listAccount.splice(i, 1)
+                        listAccount.push(account)
+                        localStorage.setItem("listAccount", JSON.stringify(listAccount))
+                        // Reset lại giỏ hàng và set cart và listOrder lên localStorage
+                        localCart = []
+                        localStorage.setItem("cart", JSON.stringify(localCart))
+                        // Trở về trang chủ
+                        alert("Order successfully")
+                        location.href = "index.html"
+                        return
+                    }
+                }
+            }
         }
     }
 }
