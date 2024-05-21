@@ -6,11 +6,14 @@ let nameProduct = document.querySelector(".nameProduct").innerHTML = `
 <h5>$${localStorage.getItem("price")}.00</h5>
 <h5>Inventory : ${localStorage.getItem("stock")}</h5>
 `
-let imgProduct = document.querySelector(".imgProduct").innerHTML = `
-<img class="bor-rad-nor h-100"
-    src="${localStorage.getItem("img")}"
-    alt="">
-`
+let imgProduct = document.querySelectorAll(".imgProduct")
+for (let i = 0; i < imgProduct.length; i++) {
+    imgProduct[i].innerHTML = `
+    <img class="bor-rad-nor h-100"
+        src="${localStorage.getItem("img")}"
+        alt="">
+    `
+}
 let inforProduct = {
     price: localStorage.getItem("price"),
     img: localStorage.getItem("img"),

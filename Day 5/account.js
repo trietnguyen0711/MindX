@@ -57,7 +57,7 @@ function translatePage2() {
                 // Lấy listOrder và render giao diện với sản phẩm đầu tiên là đại diện
                 let html = ""
                 let k = listAccount[i].listOrder.length  // Vẫn chả hiểu lý do tại sao nhét nguyên cái "listAccount[i].listOrder.length" vào for thì nó báo lỗi phải thông qua biến k
-                // Cái chuỗi dài quá nên muốn chui vào các giá trị bên trong thì phải khai báo 1 hàm mới là localList
+                // Cái chuỗi dài quá nên muốn chui vào các giá trị bên trong thì phải khai báo 1 hàm mới là localListOrder
                 // Khai bao de chui vao listOrder
                 let localListOrder = listAccount[i].listOrder
                 let = listAccount[i].listOrder[i]
@@ -70,11 +70,11 @@ function translatePage2() {
                         <img class="col-lg-3 col-4" src=${listProduct[0].img}>
                         <div class="col-lg-9 col-12">
                             <div class="d-flex-between w-100 h-50">
-                                <h4 class="w-50">${listProduct[0].name}</h4>
+                                <h4 class="w-50">${listProduct[0].name} (more)</h4>
                                 <h4>Successful</h4>
                             </div>
                             <div class="w-100 h-50 row ">
-                                <div class="col-6 h-50">Products: ${totalAmount()}</div>
+                                <div class="col-6 h-50 mt-md-0 mt-3">Products: ${totalAmount()}</div>
                                 <div class="col-6 h-50 d-flex pe-0" style="justify-content: end ;">Price :$${totalPrict()}.00</div>
                                 <div class="col-6 h-50"></div>
                                 <a href="#" class="col-6 h-50 headList-a-nor d-flex cur-pointer"
