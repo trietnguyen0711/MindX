@@ -30,7 +30,7 @@ function translatePage1() {
     <h4 class="mt-4">Your Information</h4>
         <div class="d-flex">
             <i class="fa-regular fa-user me-3 d-flex-center"></i>
-            <h5 class="email">Your Email</h5>
+            <h5 class="email">${localStorage.getItem("user")}</h5>
         </div>
         <div class="d-flex">
             <i class="fa-solid fa-location-dot me-3 d-flex-center"></i>
@@ -42,7 +42,7 @@ function translatePage1() {
         </div>
         <div class="d-flex">
             <h5 class="me-3">Password</h5>
-            <input type="password" class="rounded-pill px-3 password" disabled>
+            <input type="password" class="rounded-pill px-3 password" value="${localStorage.getItem("password")} " disabled>
         </div>
     `
 }
@@ -74,11 +74,11 @@ function translatePage2() {
                                 <h4>Successful</h4>
                             </div>
                             <div class="w-100 h-50 row ">
-                                <div class="col-6 h-50">Total Products: ${totalAmount()}</div>
-                                <div class="col-6 h-50 d-flex pe-0" style="justify-content: end ;">Total:$${totalPrict()}.00</div>
+                                <div class="col-6 h-50">Products: ${totalAmount()}</div>
+                                <div class="col-6 h-50 d-flex pe-0" style="justify-content: end ;">Price :$${totalPrict()}.00</div>
                                 <div class="col-6 h-50"></div>
                                 <a href="#" class="col-6 h-50 headList-a-nor d-flex cur-pointer"
-                                    style="justify-content: end ; color: blue">Details</a>
+                                    style="justify-content: end ; color: blue">More</a>
                             </div>
                             <div class="col-12 bg-gray" style="height: 3px;"></div>
                         </div>
