@@ -128,6 +128,9 @@ if (localStorage.getItem("cart")) {
                             password: listAccount[i].password,
                             listOrder: listOrder,
                         }
+                        // Set id của đơn hàng này lên localStorage để nhận diện
+                        let idOrder = listOrder.length - 1
+                        localStorage.setItem("idOrder", idOrder)
                         // Push vào listAccount[i] đã được xác định đồng thời xóa thằng cũ
                         listAccount.splice(i, 1)
                         listAccount.push(account)
@@ -135,9 +138,10 @@ if (localStorage.getItem("cart")) {
                         // Reset lại giỏ hàng và set cart và listOrder lên localStorage
                         localCart = []
                         localStorage.setItem("cart", JSON.stringify(localCart))
+
                         // Trở về trang chủ
                         alert("Order successfully")
-                        location.href = "index.html"
+                        location.href = "detail.html"
                         return
                     }
                 }
