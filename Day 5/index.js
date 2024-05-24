@@ -91,3 +91,7 @@ else {
         location.href = "sign.html"
     })
 }
+//  Các chức năng cần bổ sung vào trang web
+// - Cập nhật địa chỉ, tên, sdt đơn hàng dựa trên input ( (bắt buộc))
+// - Trừ số lượng hàng sau khi đặt hàng thành công
+// - Cập nhật trạng thái đơn hàng

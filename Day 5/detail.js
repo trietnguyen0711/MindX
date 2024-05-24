@@ -38,7 +38,7 @@ for (let i = 0; i < listAccount.length; i++) {
             // Tìm và xác nhận đơn hàng muốn xem
             if (i == localStorage.getItem("idOrder")) {
                 let idCurrent = document.querySelector(".idCurrent")
-                idCurrent.innerText = `SPXUK0` + i
+                idCurrent.innerText = `SPXVN0` + i
                 let listProduct = listOrder[i]
                 let html1 = ""
                 let html2 = ""
