@@ -37,9 +37,14 @@ for (let i = 0; i < listAccount.length; i++) {
         for (let i = 0; i < listOrder.length; i++) {
             // Tìm và xác nhận đơn hàng muốn xem
             if (i == localStorage.getItem("idOrder")) {
-                let idCurrent = document.querySelector(".idCurrent")
-                idCurrent.innerText = `SPXVN0` + i
-                let listProduct = listOrder[i]
+                // InnerHTML thong tin san pham
+                let idCurrent = document.querySelector(".idCurrent").innerText = `SPXVN0` + i
+                let note = document.querySelector(".note").innerHTML = `Your note : ${listOrder[i].note}`
+                let nameOrder = document.querySelector(".nameOrder").innerHTML = `${listOrder[i].nameOrder}`
+                let phoneOrder = document.querySelector(".phoneOrder").innerHTML = `${listOrder[i].phone}`
+                let addressOrder = document.querySelector(".addressOrder").innerHTML = `${listOrder[i].address}`
+                let cityDisOrder = document.querySelector(".cityDisOrder").innerHTML = `${listOrder[i].district}, ${listOrder[i].city}`
+                let listProduct = listOrder[i].product
                 let html1 = ""
                 let html2 = ""
                 let totalPrice = 0

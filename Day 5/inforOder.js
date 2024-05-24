@@ -103,6 +103,13 @@ if (localStorage.getItem("cart")) {
                     return
                 }
             }
+            // Cac input thong tin don hang
+            let inforName = document.querySelector(".inforName")
+            let inforPhone = document.querySelector(".inforPhone")
+            let inforNote = document.querySelector(".inforNote")
+            let inforCity = document.querySelector(".inforCity")
+            let inforDistrict = document.querySelector(".inforDistrict")
+            let inforAddress = document.querySelector(".inforAddress")
             // Đơn hàng thành công được push vào tài khoản đang đăng nhập
             // Xác định tài khoản hiện tại và push vào listAccount[i] đã được xác định
             let user = localStorage.getItem("user")
@@ -113,12 +120,31 @@ if (localStorage.getItem("cart")) {
                     if (listAccount[i].listOrder) {
                         //những đơn hàng thành công được push vào chuỗi
                         let listOrder = listAccount[i].listOrder
-                        listOrder.push(localCart)
+                        // Lấy thông tin đơn hàng thông qua input và localCart
+                        let newOrder = {
+                            nameOrder: inforName.value,
+                            phone: inforPhone.value,
+                            note: inforNote.value,
+                            city: inforCity.value,
+                            district: inforDistrict.value,
+                            address: inforAddress.value,
+                            product: localCart
+                        }
+                        listOrder.push(newOrder)
                         updateListOrder(listOrder)
                     }
                     else {
                         let listOrder = []
-                        listOrder.push(localCart)
+                        let newOrder = {
+                            nameOrder: inforName.value,
+                            phone: inforPhone.value,
+                            note: inforNote.value,
+                            city: inforCity.value,
+                            district: inforDistrict.value,
+                            address: inforAddress.value,
+                            product: localCart
+                        }
+                        listOrder.push(newOrder)
                         updateListOrder(listOrder)
                     }
                     function updateListOrder(listOrder) {

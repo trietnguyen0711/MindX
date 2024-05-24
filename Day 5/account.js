@@ -60,10 +60,9 @@ function translatePage2() {
                 // Cái chuỗi dài quá nên muốn chui vào các giá trị bên trong thì phải khai báo 1 hàm mới là localListOrder
                 // Khai bao de chui vao listOrder
                 let localListOrder = listAccount[i].listOrder
-                let = listAccount[i].listOrder[i]
                 for (let i = 0; i < k; i++) {
                     // Chui vao danh sach cac san pham trong tung don hang
-                    let listProduct = localListOrder[i]
+                    let listProduct = localListOrder[i].product
                     html += `
                     <div class="row mt-5">
                         <div class="col-12 bg-gray" style="height: 3px;"></div>
