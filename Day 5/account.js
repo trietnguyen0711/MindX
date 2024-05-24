@@ -77,8 +77,8 @@ function translatePage2() {
                                 <div class="col-6 h-50 mt-md-0 mt-3">Products: ${totalAmount()}</div>
                                 <div class="col-6 h-50 d-flex pe-0" style="justify-content: end ;">Price :$${totalPrict()}.00</div>
                                 <div class="col-6 h-50"></div>
-                                <a href="#" class="col-6 h-50 headList-a-nor d-flex cur-pointer"
-                                    style="justify-content: end ; color: blue">More</a>
+                                <a class="col-6 h-50 headList-a-nor d-flex cur-pointer"
+                                    style="justify-content: end ; color: blue" onclick="updateOrderId(${i})">More</a>
                             </div>
                             <div class="col-12 bg-gray" style="height: 3px;"></div>
                         </div>
@@ -111,6 +111,11 @@ function translatePage2() {
             }
         }
     }
+}
+// Function cập nhật idOrder lên localStorage và chuyển qua website detail
+function updateOrderId(i) {
+    localStorage.setItem("idOrder", i);
+    location.href = "detail.html"
 }
 translatePage[0].addEventListener("click", function () {
     underlineDiv[0].classList.remove("d-none")

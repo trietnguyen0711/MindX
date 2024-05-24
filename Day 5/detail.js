@@ -37,12 +37,14 @@ for (let i = 0; i < listAccount.length; i++) {
         for (let i = 0; i < listOrder.length; i++) {
             // Tìm và xác nhận đơn hàng muốn xem
             if (i == localStorage.getItem("idOrder")) {
+                let idCurrent = document.querySelector(".idCurrent")
+                idCurrent.innerText = `SPXUK0` + i
                 let listProduct = listOrder[i]
                 let html1 = ""
                 let html2 = ""
                 let totalPrice = 0
                 for (let i = 0; i < listProduct.length; i++) {
-                    // Render giao dien
+                    // Render san pham
                     let product = listProduct[i]
                     html1 += `
                 <div class="d-flex-between row mt-3" style="border: 1px solid rgba(0, 0, 0, .09)">
@@ -51,6 +53,7 @@ for (let i = 0; i < listAccount.length; i++) {
                 <div class="col-8">
                     <h4>${product.name}</h4>
                     <p>Classification of goods : red </p>
+                    <p>Price : $${product.price}.00</p>
                     <p>x${product.amount}</p>
                     <h5>Total Price : $${JSON.parse(product.amount) * JSON.parse(product.price)}.00</h5>
                 </div>
@@ -58,6 +61,7 @@ for (let i = 0; i < listAccount.length; i++) {
                 `
                     totalPrice += JSON.parse(product.amount) * JSON.parse(product.price)
                 }
+                // Render tong gia
                 html2 += `
                 <h4>Detail price</h4>
                 <p>Total price of all product : $${totalPrice}.00</p>
