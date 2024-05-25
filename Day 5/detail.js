@@ -42,8 +42,15 @@ for (let i = 0; i < listAccount.length; i++) {
                 let note = document.querySelector(".note").innerHTML = `Your note : ${listOrder[i].note}`
                 let nameOrder = document.querySelector(".nameOrder").innerHTML = `${listOrder[i].nameOrder}`
                 let phoneOrder = document.querySelector(".phoneOrder").innerHTML = `${listOrder[i].phone}`
-                let addressOrder = document.querySelector(".addressOrder").innerHTML = `${listOrder[i].address}`
-                let cityDisOrder = document.querySelector(".cityDisOrder").innerHTML = `${listOrder[i].district}, ${listOrder[i].city}`
+                // Kiem tra tinh ton tai cua nhung gtr nay
+                if (listOrder[i].address) {
+                    let addressOrder = document.querySelector(".addressOrder").innerHTML = `${listOrder[i].address}`
+                    let cityDisOrder = document.querySelector(".cityDisOrder").innerHTML = `${listOrder[i].district}, ${listOrder[i].city}`
+                }
+                else if (listOrder[i].date) {
+                    let addressOrder = document.querySelector(".addressOrder").innerHTML = `Appointment Day : ${listOrder[i].date}`
+                    let cityDisOrder = document.querySelector(".cityDisOrder").innerHTML = `Store : ${listOrder[i].store}`
+                }
                 let listProduct = listOrder[i].product
                 let html1 = ""
                 let html2 = ""

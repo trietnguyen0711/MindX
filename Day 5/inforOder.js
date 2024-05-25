@@ -14,6 +14,7 @@ if (localStorage.getItem("cart")) {
     let receive = document.querySelector(".receive")
     let delivery = document.querySelector(".delivery")
     let exchange = document.querySelector(".exchange")
+    let m = 1
     receive.addEventListener("click", function () {
         exchange.innerHTML = `
         <div class="border border-2 py-3 px-2 w-100 border-top-0">
@@ -31,6 +32,7 @@ if (localStorage.getItem("cart")) {
         `
         delivery.classList.remove("bg-aqua")
         receive.classList.add("bg-aqua")
+        m = 1
     })
     delivery.addEventListener("click", function () {
         exchange.innerHTML = `
@@ -51,6 +53,7 @@ if (localStorage.getItem("cart")) {
         `
         receive.classList.remove("bg-aqua")
         delivery.classList.add("bg-aqua")
+        m = 2
     })
     let listProduct = document.querySelector(".listProduct")
     let totalPrice = document.querySelector(".totalPrice")
@@ -107,9 +110,13 @@ if (localStorage.getItem("cart")) {
             let inforName = document.querySelector(".inforName")
             let inforPhone = document.querySelector(".inforPhone")
             let inforNote = document.querySelector(".inforNote")
+            // Dang delivery
             let inforCity = document.querySelector(".inforCity")
             let inforDistrict = document.querySelector(".inforDistrict")
             let inforAddress = document.querySelector(".inforAddress")
+            // Dang gap truc tiep
+            let inforDate = document.querySelector(".inforDate")
+            let inforStore = document.querySelector(".inforStore")
             // Đơn hàng thành công được push vào tài khoản đang đăng nhập
             // Xác định tài khoản hiện tại và push vào listAccount[i] đã được xác định
             let user = localStorage.getItem("user")
@@ -121,31 +128,37 @@ if (localStorage.getItem("cart")) {
                         //những đơn hàng thành công được push vào chuỗi
                         let listOrder = listAccount[i].listOrder
                         // Lấy thông tin đơn hàng thông qua input và localCart
-                        let newOrder = {
-                            nameOrder: inforName.value,
-                            phone: inforPhone.value,
-                            note: inforNote.value,
-                            city: inforCity.value,
-                            district: inforDistrict.value,
-                            address: inforAddress.value,
-                            product: localCart
-                        }
-                        listOrder.push(newOrder)
-                        updateListOrder(listOrder)
+                        inforOrder(listOrder)
                     }
                     else {
                         let listOrder = []
-                        let newOrder = {
-                            nameOrder: inforName.value,
-                            phone: inforPhone.value,
-                            note: inforNote.value,
-                            city: inforCity.value,
-                            district: inforDistrict.value,
-                            address: inforAddress.value,
-                            product: localCart
+                        inforOrder(listOrder)
+                    }
+                    // Function lay thong tin don hang
+                    function inforOrder(listOrder) {
+                        if (m == 1) {
+                            let newOrder = {
+                                nameOrder: inforName.value,
+                                phone: inforPhone.value,
+                                note: inforNote.value,
+                                date: inforDate.value,
+                                store: inforStore.value,
+                                product: localCart,
+                            }
+                            listOrder.push(newOrder)
+                            updateListOrder(listOrder)
                         }
-                        listOrder.push(newOrder)
-                        updateListOrder(listOrder)
+                        else {
+                            let newOrder = {
+                                nameOrder: inforName.value,
+                                phone: inforPhone.value,
+                                note: inforNote.value,
+                                city: inforCity.value,
+                                district: inforDistrict.value,
+                            }
+                            listOrder.push(newOrder)
+                            updateListOrder(listOrder)
+                        }
                     }
                     function updateListOrder(listOrder) {
                         // Tạo lại tài khoản có thêm biến listOrder và totalPrict
