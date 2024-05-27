@@ -91,7 +91,9 @@ else {
         location.href = "sign.html"
     })
 }
-//  Các chức năng cần bổ sung vào trang web
-// - Cập nhật địa chỉ, tên, sdt đơn hàng dựa trên input ( (bắt buộc))
+// Các chức năng cần bổ sung vào trang web
+// - Confirm mật khẩu đăng kí (COMPLETED)
 // - Trừ số lượng hàng sau khi đặt hàng thành công
+// - Cap nhat lai ma don hang
+// -padStart string in js
 // - Cập nhật trạng thái đơn hàng
