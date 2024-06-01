@@ -1,3 +1,32 @@
+// Danh sách các tk admin
+let adminAccount = [
+    {
+        email: "Triet"
+    },
+    {
+        email: "Hoa"
+    }
+]
+// Function này được gọi 2 lần
+// Lần 1 gọi ở đầu website
+// Lần 2 gọi khi kích hoạt 1 function khác là translatePage1
+admin()
+
+function admin() {
+    let admin = document.querySelector(".admin")
+    let user = localStorage.getItem("user")
+    // Kiểm tra đây có phải là tk admin không ?
+    for (let i = 0; i < adminAccount.length; i++) {
+        if (adminAccount[i].email == user) {
+            // Xóa thuộc tính d-none của thẻ button admin để sử dụng khả năng của admin
+            admin.classList.remove("d-none")
+        }
+    }
+    // Khi click vào sẽ link tới trang web thay đổi stock
+    admin.addEventListener("click", function () {
+        location.href = "control.html"
+    })
+}
 let returnButton = document.querySelector(".return").addEventListener("click", function () {
     location.href = "index.html"
 })
@@ -44,8 +73,11 @@ function translatePage1() {
             <h5 class="me-3">Password</h5>
             <input type="password" class="rounded-pill px-3 password" value="${localStorage.getItem("password")} " disabled>
         </div>
+        <buttion class="btn btn-info admin d-none">Admin</buttion>
     `
+    admin()
 }
+
 function translatePage2() {
     // Xác định user hiện tại
     let listAccount = JSON.parse(localStorage.getItem("listAccount"))

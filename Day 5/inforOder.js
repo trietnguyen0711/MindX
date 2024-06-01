@@ -110,11 +110,11 @@ if (localStorage.getItem("cart")) {
             let inforName = document.querySelector(".inforName")
             let inforPhone = document.querySelector(".inforPhone")
             let inforNote = document.querySelector(".inforNote")
-            // Dang delivery
+            // Dạng delivery
             let inforCity = document.querySelector(".inforCity")
             let inforDistrict = document.querySelector(".inforDistrict")
             let inforAddress = document.querySelector(".inforAddress")
-            // Dang gap truc tiep
+            // Dạng gap truc tiep
             let inforDate = document.querySelector(".inforDate")
             let inforStore = document.querySelector(".inforStore")
             // Đơn hàng thành công được push vào tài khoản đang đăng nhập
@@ -128,14 +128,17 @@ if (localStorage.getItem("cart")) {
                         //những đơn hàng thành công được push vào chuỗi
                         let listOrder = listAccount[i].listOrder
                         // Lấy thông tin đơn hàng thông qua input và localCart
+                        updateData()
                         inforOrder(listOrder)
                     }
                     else {
                         let listOrder = []
+                        updateData()
                         inforOrder(listOrder)
                     }
                     // Function lay thong tin don hang
                     function inforOrder(listOrder) {
+                        // Check dạng website để lấy thông tin cho đúng
                         if (m == 1) {
                             let newOrder = {
                                 nameOrder: inforName.value,
@@ -155,13 +158,14 @@ if (localStorage.getItem("cart")) {
                                 note: inforNote.value,
                                 city: inforCity.value,
                                 district: inforDistrict.value,
+                                product: localCart,
                             }
                             listOrder.push(newOrder)
                             updateListOrder(listOrder)
                         }
                     }
                     function updateListOrder(listOrder) {
-                        // Tạo lại tài khoản có thêm biến listOrder và totalPrict
+                        // Tạo lại tài khoản có thêm biến listOrder
                         let account = {
                             email: listAccount[i].email,
                             password: listAccount[i].password,
@@ -174,14 +178,24 @@ if (localStorage.getItem("cart")) {
                         listAccount.splice(i, 1)
                         listAccount.push(account)
                         localStorage.setItem("listAccount", JSON.stringify(listAccount))
-                        // Reset lại giỏ hàng và set cart và listOrder lên localStorage
-                        localCart = []
-                        localStorage.setItem("cart", JSON.stringify(localCart))
-
+                        // Reset lại giỏ hàng
+                        localStorage.removeItem("cart")
                         // Trở về trang chủ
                         alert("Order successfully")
                         location.href = "detail.html"
                         return
+                    }
+                    // Cập nhật stock trong data
+                    function updateData() {
+                        let data = JSON.parse(localStorage.getItem("data"))
+                        for (let i = 0; i < data.length; i++) {
+                            for (let k = 0; k < localCart.length; k++) {
+                                if (data[i].nameProduct == localCart[k].name) {
+                                    data[i].stock -= localCart[k].amount
+                                }
+                            }
+                        }
+                        localStorage.setItem("data", JSON.stringify(data))
                     }
                 }
             }

@@ -20,30 +20,66 @@ let inforProduct = {
     name: localStorage.getItem("nameProduct"),
     id: localStorage.getItem("id"),
     amount: JSON.parse(localStorage.getItem("amountEveryProduct")),
-    stock: localStorage.getItem("stock")
 }
 let btn = document.querySelector(".btn")
 btn.addEventListener("click", function () {
+    // Kiểm tra giỏ hàng có tồn tại không ?
     if (localStorage.getItem("cart")) {
         let localCart = JSON.parse(localStorage.getItem("cart"))
+        let stock = localStorage.getItem("stock")
+        // Kiểm tra loại hàng này có tồn tại trong giỏ hàng trước đây không ?
         for (let i = 0; i < localCart.length; i++) {
             if (inforProduct.id == localCart[i].id) {
-                if (inforProduct.amount == inforProduct.stock) {
+                // Kiểm tra đơn hàng còn tồn kho không
+                if (stock == 0) {
                     alert("Out of stock")
                     return
                 }
-                localCart.splice(i, 1);
-                inforProduct.amount += 1
-                localCart.push(inforProduct)
+                // Kiểm tra số lượng amount với stock
+                let data = JSON.parse(localStorage.getItem("data"))
+                for (let k = 0; k < data.length; k++) {
+                    if (data[k].id == inforProduct.id) {
+                        if (localCart[i].amount >= data[k].stock) {
+                            alert("Out of stock")
+                            return
+                        }
+                    }
+                }
+                localCart[i].amount += 1
                 localStorage.setItem("cart", JSON.stringify(localCart))
                 return
             }
         }
+        // Không tồn tại trong giỏ hàng
+        // Kiểm tra đơn hàng còn tồn kho không
+        if (stock == 0) {
+            alert("Out of stock")
+            return
+        }
+        // Lý do không cần dòng dưới là do TH này chỉ xảy ra khi không tồn tại có loại hàng này trước đây
+        // Nên chắc chắn số lượng là 0 => không cần phải so sáng với stock
+        // Đồng thời sau khi nhấn lần 2 thì chắc chắn nó sẽ lọt vào một trong các ĐK của vòng for ở trên
+        // else if (localCart[i].amount >= localCart[i].stock) {
+        //     alert("Out of stock")
+        //     return
+        // }
         localCart.push(inforProduct)
         localStorage.setItem("cart", JSON.stringify(localCart))
+        return
     }
     else {
         let cart = []
+        let stock = localStorage.getItem("stock")
+        if (stock == 0) {
+            alert("Out of stock")
+            return
+        }
+        // Lý do không cần dòng dưới là do TH này chỉ xảy ra khi không tồn tại có loại hàng này trước đây
+        // Nên chắc chắn số lượng là 0 => không cần phải so sáng với stock
+        // else if (localCart[i].amount >= localCart[i].stock) {
+        //     alert("Out of stock")
+        //     return
+        // }
         cart.push(inforProduct)
         localStorage.setItem("cart", JSON.stringify(cart))
     }

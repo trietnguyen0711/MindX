@@ -230,3 +230,7 @@
     height: .1875rem;
     width: 100%;
 }
+
+.ms-10 {
+    margin-left: 145px;
+}
