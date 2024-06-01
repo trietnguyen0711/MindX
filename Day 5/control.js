@@ -55,7 +55,8 @@ function buttonInfor(value, id) {
         if (id == data[i].id) {
             // Kinh nghiệm quý báu làm đợt sau 
             // Nhớ biến tất cả số thành số đừng để dạng string ko là bay màu nếu đi so sánh
-            data[i].stock = parseInt(value)
+            // data[i].stock = parseInt(value)
+            data[i].stock = +value
             localStorage.setItem("data", JSON.stringify(data))
             return
         }

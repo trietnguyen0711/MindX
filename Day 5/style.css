@@ -158,6 +158,24 @@
 .overflow-x {
     overflow-y: hidden;
     overflow-x: scroll;
+    scrollbar-width: 20px;
+    scrollbar-color: orange;
+}
+
+.overflow-x::-webkit-scrollbar {
+    height: 20px;
+    width: 20px;
+    background-color: red;
+    border-radius: 10px;
+}
+
+.overflow-x::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #d9dde1;
+}
+
+.overflow-x::-webkit-scrollbar-corner {
+    background-color: lightblue;
 }
 
 .size-square {
@@ -233,4 +251,24 @@
 
 .ms-10 {
     margin-left: 145px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

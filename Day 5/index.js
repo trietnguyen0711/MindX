@@ -62,7 +62,7 @@ for (let i = 0; i < data.length; i++) {
         <div class="d-flex-between w-100">
         <h5 class="price">$${inforProduct.price}.00 </h5>
         <button type="button" class="btn btn-primary" onclick="buttonInfor(${inforProduct.id})"><a class="headList-a-nor"
-        style="color: black;">Buy now</a></button>
+        style="color: black;">See infor</a></button>
         </div>
         </div>
     `
