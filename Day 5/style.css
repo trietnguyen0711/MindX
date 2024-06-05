@@ -10,43 +10,16 @@
     transform: translate(80%, 120%);
 }
 
-@media only screen and (max-width: 960px) and (min-width: 800px) {
-    .bagContent {
-        width: 15px !important;
-        height: 15px !important;
-        transform: translate(-37%, 115%);
-    }
-}
-
-@media only screen and (max-width: 800px) and (min-width: 550px) {
-    .bagContent {
-        width: 15px !important;
-        height: 15px !important;
-        transform: translate(25%, 115%);
-    }
-}
-
-
-@media only screen and (max-width: 550px) and (min-width: 450px) {
-    .bagContent {
-        width: 15px !important;
-        height: 15px !important;
-        transform: translate(-72%, 104%);
-    }
-}
-
-@media only screen and (max-width: 450px) and (min-width: 200px) {
-    .bagContent {
-        width: 15px !important;
-        height: 15px !important;
-        transform: translate(3%, 104%);
-    }
-}
-
 .size-circle {
     border-radius: 50%;
     width: 30px !important;
     height: 30px !important;
+}
+
+.listHeader {
+    text-align: center;
+    width: 100px;
+    transform: translate(20%, 20%);
 }
 
 .color-white {
@@ -163,9 +136,8 @@
 }
 
 .overflow-x::-webkit-scrollbar {
-    height: 20px;
-    width: 20px;
-    background-color: red;
+    height: 10px;
+    background-color: black;
     border-radius: 10px;
 }
 
@@ -194,6 +166,10 @@
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
+}
+
+.color-gray {
+    color: gray !important
 }
 
 .d-flex-around {
@@ -253,6 +229,26 @@
     margin-left: 145px;
 }
 
+.fw-nor {
+    font-weight: 600;
+}
+
+.specialBox {
+    overflow: hidden;
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
+    border: 5px solid white;
+    transition: 1s;
+}
+
+.specialBox:hover {
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+    border: none;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -271,4 +267,9 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+.header {
+    position: fixed;
+    z-index: 100;
 }

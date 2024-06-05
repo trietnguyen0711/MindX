@@ -12,43 +12,62 @@
     <link rel="shortcut icon" href="https://www.apple.com/favicon.ico" type="image/x-icon">
 </head>
 
-<body class="bg-light">
-    <div class="container-fluid bg-white">
+<body class="bg-light main">
+    <div class="mx-auto ds d-none">
+        <div class="container bg-black position-fixed mt-3">
+            <a class="fs-6 headList-a-nor cur-pointer signUp fs-3 whiteMode">Sign up</a>
+            <a href="#Information" class="fs-6 headList-a-nor cur-pointer w-100 d-block mt-2 fs-3 whiteMode">About
+                us</a>
+            <a href="#Latest" class="fs-6 headList-a-nor cur-pointer w-100 d-block mt-2 fs-3 whiteMode">Latest</a>
+            <a href="#Accessories"
+                class="fs-6 headList-a-nor cur-pointer w-100 d-block mt-2 fs-3 whiteMode">Accessories</a>
+            <a href="#Differences"
+                class="fs-6 headList-a-nor cur-pointer w-100 d-block mt-2 fs-3 whiteMode">Differences</a>
+            <a href="#Special" class="fs-6 headList-a-nor cur-pointer w-100 d-block mt-2 fs-3 whiteMode">Special</a>
+            <a href="#Information"
+                class="fs-6 headList-a-nor cur-pointer w-100 d-block mt-2 fs-3 whiteMode">Information</a>
+            <a class="fs-6 headList-a-nor cur-pointer light w-100 d-block mt-2 fs-3 whiteMode">Light mode</a>
+            <a class="fs-6 headList-a-nor cur-pointer dark w-100 d-block mt-2 fs-3 whiteMode">Dark mode</a>
+        </div>
+    </div>
+    <div class="container-fluid bg-white header">
         <div class="container mx-auto row d-flex-between" style="height: 70px;">
             <div class="col-1 h-100 d-flex-center fs-1 cur-pointer"><a href="./index.html"
                     class="fa-brands fa-apple headList-a-nor" style="color: black;"></a></div>
             <ul class="list-none d-flex-between col-10 m-0 d-lg-flex d-none">
-                <a class="fs-6 headList-a-nor cur-pointer cur-pointer">Store</a>
-                <a class="fs-6 headList-a-nor cur-pointer">Mac</a>
-                <a class="fs-6 headList-a-nor cur-pointer">iPad</a>
-                <a class="fs-6 headList-a-nor cur-pointer">iPhone</a>
-                <a class="fs-6 headList-a-nor cur-pointer">Watch</a>
-                <a class="fs-6 headList-a-nor cur-pointer">Vision</a>
-                <a class="fs-6 headList-a-nor cur-pointer">AirPods</a>
-                <a class="fs-6 headList-a-nor cur-pointer">TV & Home</a>
-                <a class="fs-6 headList-a-nor cur-pointer">Entertainment</a>
+                <a href="#Information" class="fs-6 headList-a-nor cur-pointer">About us</a>
+                <a href="#Latest" class="fs-6 headList-a-nor cur-pointer">Latest</a>
+                <a href="#Accessories" class="fs-6 headList-a-nor cur-pointer">Accessories</a>
+                <a href="#Differences" class="fs-6 headList-a-nor cur-pointer">Differences</a>
+                <a href="#Special" class="fs-6 headList-a-nor cur-pointer">Special</a>
+                <a href="#Information" class="fs-6 headList-a-nor cur-pointer">Information</a>
+                <a class="fs-6 headList-a-nor cur-pointer light">Light mode</a>
+                <a class="fs-6 headList-a-nor cur-pointer dark">Dark mode</a>
                 <a class="fs-6 headList-a-nor cur-pointer signUp">sign in</a>
             </ul>
-            <div class="col-lg-1 col-sm-3 col-5 h-100 d-flex-between">
-                <div class="col-3 cur-pointer position-relative">
-                    <p class="position-absolute bor-rad-nor bg-info d-flex-center top-0 end-0 amountProduct"
-                        style="color:blue;">0
-                    </p>
-                    <a href="./bag.html" class="fs-3 fa-solid fa-bag-shopping headList-a-nor" style="color: black;">
+            <div class="col-lg-1 col-3 h-100 d-flex-between">
+                <div class="col-3 cur-pointer">
+                    <a href="./bag.html" class="fs-3 fa-solid fa-bag-shopping headList-a-nor position-relative"
+                        style="color: black;">
+                        <p class="position-absolute bor-rad-nor bg-info d-flex-center top-0 end-0 amountProduct"
+                            style="color:blue; font-size: 10px;">0
+                        </p>
                     </a>
                 </div>
-                <div class="col-1 d-lg-none d-block cur-pointer"><i class="fa-solid fa-bars"></i>
+                <div class="col-1 d-lg-none d-block cur-pointer listChoose">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid pt-5">
         <div class="container mx-auto row position-relative d-flex-between" style="height: 250px;">
             <div class="col-lg-9 col-12">
-                <h1 class="w-75 d-sm-flex d-none" style="color: gray; min-width: 495px;">Store. The best way to buy the
+                <h1 class="w-75 d-sm-flex d-none" style="color: gray; min-width: 495px;">Store. The best way
+                    to buy the
                     products you
                     love.</h1>
-                <h1 class="position-absolute m-0 d-sm-flex d-none"
+                <h1 class="position-absolute m-0 d-sm-flex d-none whiteMode"
                     style="color: black; transform: translate(0%,-217%);">Store.
                 </h1>
                 <h1 class="w-75 d-sm-none d-flex"><i class="fa-solid fa-store me-2"></i> Apple store</h1>
@@ -56,11 +75,11 @@
             <div class="col-lg-3 col-12 d-lg-block d-flex-between ">
                 <div class="" style="width: 150px;">
                     <h5>Need shopping help?</h5>
-                    <a class="a-nor" href="#">Ask a specialist</a>
+                    <a class="a-nor grayMode" href="#">Ask a specialist</a>
                 </div>
                 <div class="" style="width: 150px;">
-                    <h5>Visit an Apple store</h5>
-                    <a class="a-nor" href="#">Find one near you</a>
+                    <h5 class="whiteMode">Visit an Apple store</h5>
+                    <a class="a-nor grayMode" href="#">Find one near you</a>
                 </div>
             </div>
         </div>
@@ -70,161 +89,302 @@
             <div class="p-2">
                 <img loading="lazy" width="200" height="130"
                     src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-mac-nav-202310?wid=400&hei=260&fmt=png-alpha&.v=1696964122666">
-                <a href="#" class="w-100 text-center a-nor">Mac</a>
+                <a href="#" class="w-100 text-center a-nor whiteMode">Mac</a>
             </div>
             <div class="p-2">
                 <img loading="lazy" width="200" height="130"
                     src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-iphone-nav-202309_GEO_US?wid=400&hei=260&fmt=png-alpha&.v=1692971740190">
-                <a href="#" class="w-100 text-center a-nor">iPhone</a>
+                <a href="#" class="w-100 text-center a-nor whiteMode">iPhone</a>
             </div>
             <div class="p-2">
                 <img loading="lazy" width="200" height="130"
                     src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-ipad-nav-202210?wid=400&hei=260&fmt=png-alpha&.v=1664912135437">
-                <a href="#" class="w-100 text-center a-nor">iPad</a>
+                <a href="#" class="w-100 text-center a-nor whiteMode">iPad</a>
             </div>
             <div class="p-2">
                 <img loading="lazy" width="200" height="130"
                     src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-watch-nav-202309?wid=400&hei=260&fmt=png-alpha&.v=1693703822208">
-                <a href="#" class="w-100 text-center a-nor">Apple Watch</a>
+                <a href="#" class="w-100 text-center a-nor whiteMode">Apple Watch</a>
             </div>
             <div class="p-2">
                 <img loading="lazy" width="200" height="130"
                     src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-vision-pro-nav-202401?wid=400&hei=260&fmt=png-alpha&.v=17024035952">
-                <a href="#" class="w-100 text-center a-nor">Apple Vision Pro</a>
+                <a href="#" class="w-100 text-center a-nor whiteMode">Apple Vision Pro</a>
             </div>
             <div class="p-2">
                 <img loading="lazy" width="200" height="130"
                     src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-airpods-nav-202209?wid=400&hei=260&fmt=png-alpha&.v=166067648588">
-                <a href="#" class="w-100 text-center a-nor">AirPods</a>
+                <a href="#" class="w-100 text-center a-nor whiteMode">AirPods</a>
             </div>
             <div class="p-2">
                 <img loading="lazy" width="200" height="130"
                     src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-airtags-nav-202108?wid=400&hei=260&fmt=png-alpha&.v=1625783380000">
-                <a href="#" class="w-100 text-center a-nor">AirTag</a>
+                <a href="#" class="w-100 text-center a-nor whiteMode">AirTag</a>
             </div>
             <div class="p-2">
                 <img loading="lazy" width="200" height="130"
                     src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-appletv-nav-202210?wid=400&hei=260&fmt=png-alpha&.v=166462845848">
-                <a href="#" class="w-100 text-center a-nor">Apple TV 4K</a>
+                <a href="#" class="w-100 text-center a-nor whiteMode">Apple TV 4K</a>
             </div>
             <div class="p-2">
                 <img loading="lazy" width="200" height="130"
                     src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-homepod-nav-202301?wid=400&hei=260&fmt=png-alpha&.v=167038921665">
-                <a href="#" class="w-100 text-center a-nor">HomePod</a>
+                <a href="#" class="w-100 text-center a-nor whiteMode">HomePod</a>
             </div>
             <div class="p-2">
                 <img loading="lazy" width="200" height="130"
                     src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-accessories-nav-202403?wid=400&hei=260&fmt=png-alpha&.v=170785061159">
-                <a href="#" class="w-100 text-center a-nor">Accessories</a>
+                <a href="#" class="w-100 text-center a-nor whiteMode">Accessories</a>
             </div>
             <div class="p-2">
                 <img loading="lazy" width="200" height="130"
                     src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-13-holiday-giftcards-asit-agc-nav-202111?wid=400&hei=260&fmt=png-alpha&.v=1653339351054">
-                <a href="#" class="w-100 text-center a-nor">Apple Gift Card</a>
+                <a href="#" class="w-100 text-center a-nor whiteMode">Apple Gift Card</a>
             </div>
         </div>
     </div>
     <div class="container row mx-auto position-relative mt-5">
-        <h3 class="col-12" style="color: gray;">The Latest. Take a look at What's new, right now.</h1>
+        <h3 class="col-12" id="Latest" style="color: gray;">The Latest. Take a look at What's new, right now.</h1>
             <div class="col-12"></div>
-            <h3 class="position-absolute w-auto" style=" transform: translate(0%,0%);">The Latest.</h3>
+            <h3 class="position-absolute w-auto whiteMode" style=" transform: translate(0%,0%);">The Latest.</h3>
             <div class="container d-flex overflow-x mt-4">
-                <div class="size-products bor-rad-nor p-3 color-white me-5"
-                    style="background: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-iphone-15-pro-202309?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1692910040844);background-size: cover;">
-                    <h6>Iphone 15 pro</h6>
-                    <h3>Titanium</h3>
+                <a class="a-nor" href="img/img1.jpg">
+                    <div class="size-products bor-rad-nor p-3 color-white me-5 cur-pointer"
+                        style="background: url(img/img1.jpg);background-size: cover;">
+                        <h6>Iphone 15 pro</h6>
+                        <h3>Titanium</h3>
+                    </div>
+                </a>
+                <a href="img/img2.jpg" class="a-nor">
+                    <div class="size-products bor-rad-nor p-3 color-black me-5 cur-pointer"
+                        style="background: url(img/img2.jpg);background-size: cover;">
+                        <h6>APPLE VISION PRO</h6>
+                        <h3>Welcome to spatial computing. </h3>
 
-                </div>
-                <div class="size-products bor-rad-nor p-3 color-black me-5"
-                    style="background: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-vision-pro-202401?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1705097770616);background-size: cover;">
-                    <h6>APPLE VISION PRO</h6>
-                    <h3>Welcome to spatial computing. </h3>
+                    </div>
+                </a>
+                <a href="img/img3.jpg" class="a-nor">
 
-                </div>
-                <div class="size-products bor-rad-nor p-3 color-black me-5"
-                    style="background: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-macbook-air-202402?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1707259289595);background-size: cover;">
-                    <h6>MACBOOK AIR</h6>
-                    <h3>Designed to go places. </h3>
+                    <div class="size-products bor-rad-nor p-3 color-black me-5 cur-pointer"
+                        style="background: url(img/img3.jpg);background-size: cover;">
+                        <h6>MACBOOK AIR</h6>
+                        <h3>Designed to go places. </h3>
 
-                </div>
-                <div class="size-products bor-rad-nor p-3 color-white me-5"
-                    style="background: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-watch-s9-202309?wid=800&hei=1000&fmt=jpeg&qlt=90&.v=1692720183508);background-size: cover;">
-                    <h6>APPLE WATCH SERIES 9</h6>
-                    <h3>Smarter. Brighter. Mightier. </h3>
+                    </div>
+                </a>
+                <a href="img/img4.jpg" class="a-nor">
 
-                </div>
-                <div class="size-products bor-rad-nor p-3 color-black me-5"
-                    style="background: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-ipad-202310?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1696875297972);background-size: cover;">
-                    <h6>IPAD</h6>
-                    <h3>Lovable. Drawable. Magical. </h3>
+                    <div class="size-products bor-rad-nor p-3 color-white me-5 cur-pointer"
+                        style="background: url(img/img4.jpg);background-size: cover;">
+                        <h6>APPLE WATCH SERIES 9</h6>
+                        <h3>Smarter. Brighter. Mightier. </h3>
 
-                </div>
-                <div class="size-products bor-rad-nor p-3 color-black me-5"
-                    style="background: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-iphone-15-202309?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1692719973220);background-size: cover;">
-                    <h6>IPHONE 15</h6>
-                    <h3>Newphoria </h3>
+                    </div>
+                </a>
+                <a href="img/img5.jpg" class="a-nor">
 
-                </div>
-                <div class="size-products bor-rad-nor p-3 color-black me-5"
-                    style="background: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-macbook-pro-202310?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1696964122967);background-size: cover;">
-                    <h6>MACBOOK PRO</h6>
-                    <h3>Mind-blowing. </h3>
-                    <h3>Head-turning.</h3>
-                </div>
-                <div class="size-products bor-rad-nor p-3 color-black me-5"
-                    style="background: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-watch-ultra-202309?wid=800&hei=1000&fmt=jpeg&qlt=90&.v=1692720471465);background-size: cover;">
-                    <h6>APPLE WATCH ULTRA 2</h6>
-                    <h3>Next level adventure. </h3>
+                    <div class="size-products bor-rad-nor p-3 color-black me-5 cur-pointer"
+                        style="background: url(img/img5.jpg);background-size: cover;">
+                        <h6>IPAD</h6>
+                        <h3>Lovable. Drawable. Magical. </h3>
 
-                </div>
-                <div class="size-products bor-rad-nor p-3 color-white me-5"
-                    style="background: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-ipad-pro-202210?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1667423474414);background-size: cover;">
-                    <h6>IPAD PRO</h6>
-                    <h3>Supercharged by M2. </h3>
+                    </div>
+                </a>
+                <a href="img/img6.jpg" class="a-nor">
 
-                </div>
-                <div class="size-products bor-rad-nor p-3 color-black me-5"
-                    style="background: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-watch-se-202403?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1708726161435);background-size: cover;">
-                    <h6>APPLE WATCH SE</h6>
-                    <h3>A great deal to love. </h3>
+                    <div class="size-products bor-rad-nor p-3 color-black me-5 cur-pointer"
+                        style="background: url(img/img6.jpg);background-size: cover;">
+                        <h6>IPHONE 15</h6>
+                        <h3>Newphoria </h3>
 
-                </div>
+                    </div>
+                </a>
+                <a href="img/img7.jpg" class="a-nor">
+
+                    <div class="size-products bor-rad-nor p-3 color-black me-5 cur-pointer"
+                        style="background: url(img/img7.jpg);background-size: cover;">
+                        <h6>MACBOOK PRO</h6>
+                        <h3>Mind-blowing. </h3>
+                        <h3>Head-turning.</h3>
+                    </div>
+                </a>
+                <a href="img/img8.jpg" class="a-nor">
+                    <div class="size-products bor-rad-nor p-3 color-black me-5 cur-pointer"
+                        style="background: url(img/img8.jpg);background-size: cover;">
+                        <h6>APPLE WATCH ULTRA 2</h6>
+                        <h3>Next level adventure. </h3>
+
+                    </div>
+                </a>
+                <a href="img/img9.jpg" class="a-nor">
+
+                    <div class="size-products bor-rad-nor p-3 color-white me-5 cur-pointer"
+                        style="background: url(img/img9.jpg);background-size: cover;">
+                        <h6>IPAD PRO</h6>
+                        <h3>Supercharged by M2. </h3>
+
+                    </div>
+                </a>
+                <a href="img/img10.jpg" class="a-nor">
+
+                    <div class="size-products bor-rad-nor p-3 color-black me-5 cur-pointer"
+                        style="background: url(img/img10.jpg);background-size: cover;">
+                        <h6>APPLE WATCH SE</h6>
+                        <h3>A great deal to love. </h3>
+
+                    </div>
+                </a>
             </div>
     </div>
     <div class="container row mx-auto position-relative mt-5">
-        <h3 class="col-12" style="color: gray;">Accessories. Essentials that pair perfectly with your favorite devices.
+        <h3 class="col-12" id="Accessories" style="color: gray;">Accessories. Essentials that pair perfectly with your
+            favorite devices.
             </h1>
             <div class="col-12"></div>
-            <h3 class="position-absolute w-auto" style=" transform: translate(0%,0%);">Accessories.</h3>
+            <h3 class="position-absolute w-auto whiteMode" style=" transform: translate(0%,0%);">Accessories.</h3>
             <div class="container d-flex overflow-x mt-4 listProduct">
             </div>
     </div>
     <div class="container row mx-auto position-relative mt-5">
-        <h3 class="col-12" style="color: gray;">The Apple Store difference. Even more reasons to shop with us.</h1>
+        <h3 class="col-12 whiteMode" id="Differences" style="color: gray;">The Apple Store difference. Even more reasons
+            to shop
+            with us.</h1>
             <div class="col-12"></div>
             <h3 class="position-absolute w-auto" style=" transform: translate(0%,0%);">The Apple Store difference.</h3>
             <div class="container d-flex overflow-x mt-4">
                 <div class="size-box bg-white bor-rad-nor p-4 me-4">
-                    <i class="fa-solid fa-truck fs-1" style="color:green"></i>
-                    <h4>Enjoy two-hour delivery from an Apple Store, free delivery, or easy pickup.</h4>
+                    <i class="fa-brands fa-buysellads fs-3 mb-3" style="color: blue;"></i>
+
+                    <span class="fs-5 fw-nor" style="color: blue;">Trade in your device,</span>
+                    <span class="fs-5 fw-nor">get credit towards a new one</span>
                 </div>
                 <div class="size-box bg-white bor-rad-nor p-4 me-4">
-                    <i class="fa-solid fa-truck fs-1" style="color:green"></i>
-                    <h4>Enjoy two-hour delivery from an Apple Store, free delivery, or easy pickup.</h4>
+                    <i class="fa-brands fa-apple fs-3 mb-3" style="color: #f4835e;"></i>
+                    <br>
+                    <span class="fs-5 fw-nor" style="color: #f4835e;">Customize</span>
+                    <span class="fs-5 fw-nor">your Mac and create your own style Apple Watch.</span>
                 </div>
                 <div class="size-box bg-white bor-rad-nor p-4 me-4">
-                    <i class="fa-solid fa-truck fs-1" style="color:green"></i>
-                    <h4>Enjoy two-hour delivery from an Apple Store, free delivery, or easy pickup.</h4>
+                    <i class="fa-solid fa-face-laugh-wink fs-3 mb-3" style="color: #ac39ff;"></i>
+                    <br>
+                    <span class="fs-5 fw-nor">Make them yours </span>
+                    <span class="fs-5 fw-nor" style="color: #ac39ff;"> engrave a mix of emoji, names and numbers for
+                        free.</span>
                 </div>
                 <div class="size-box bg-white bor-rad-nor p-4 me-4">
-                    <i class="fa-solid fa-truck fs-1" style="color:green"></i>
-                    <h4>Enjoy two-hour delivery from an Apple Store, free delivery, or easy pickup.</h4>
+                    <i class="fa-solid fa-suitcase fs-3 mb-3" style="color: #007aff;"></i>
+                    <br>
+                    <span class="fs-5 fw-nor">Get a</span>
+                    <span class="fs-5 fw-nor" style="color: #007aff;">personalised shopping</span>
+                    <span class="fs-5 fw-nor">experience in the</span>
+                    <span class="fs-5 fw-nor" style="color: #007aff;">Apple Store app.</span>
                 </div>
                 <div class="size-box bg-white bor-rad-nor p-4 me-4">
-                    <i class="fa-solid fa-truck fs-1" style="color:green"></i>
-                    <h4>Enjoy two-hour delivery from an Apple Store, free delivery, or easy pickup.</h4>
+                    <i class="fa-solid fa-truck fs-3 mb-3 " style="color:green"></i>
+                    <br>
+                    <span class="fs-5 fw-nor" style="color: green;">Get a free delivery,</span>
+                    <span class="fs-5 fw-nor">pick up available items at an Apple store</span>
                 </div>
             </div>
+    </div>
+    <div class="container row mx-auto position-relative mt-5">
+        <h3 class="col-12" id="Special" style="color: gray;">Special stores. Exclusive savings for businesses, education
+            and more.
+            </h1>
+            <div class="col-12"></div>
+            <h3 class="position-absolute w-auto whiteMode" style=" transform: translate(0%,0%);">Special stores.</h3>
+            <div class="container d-flex overflow-x mt-4">
+                <a class="a-nor" href="img/img11.jpg">
+                    <div class="size-products bor-rad-nor p-3 color-black me-5 cur-pointer"
+                        style="background: url(img/img11.jpg);background-size: cover;">
+                        <h6>EDUCATION</h6>
+                        <h3>Save on a new iPad or Mac with education pricing.</h3>
+                    </div>
+                </a>
+                <a href="img/img12.jpg" class="a-nor">
+                    <div class="size-products bor-rad-nor p-3 color-white me-5 cur-pointer"
+                        style="background: url(img/img12.jpg);background-size: cover;">
+                        <h6>BUSSINESS</h6>
+                        <h3>From enterprise to small business, we’ll work with you.</h3>
+
+                    </div>
+                </a>
+                <a href="img/img13.jpg" class="a-nor">
+
+                    <div class="size-products bor-rad-nor p-3 color-black me-5 cur-pointer"
+                        style="background: url(img/img13.jpg);background-size: cover;">
+                        <h6>CERTIFIED REFURBISHED</h6>
+                        <h3>Shop refurbished Apple products backed by a one­-­year warranty. </h3>
+
+                    </div>
+                </a>
+
+            </div>
+    </div>
+    <div class="container-fluid aboutUs" style="background-color: whitesmoke;">
+        <div class="container row mx-auto">
+            <div class="col-6 d-flex-center" style="height: 500px; width: 500px;">
+                <div class="d-flex-center specialBox">
+                    <img src="img/img10.jpg" class="h-100 w-100" alt="">
+                </div>
+            </div>
+            <div class="col-6 p-2 d-flex-center">
+                <div class="">
+                    <p class="fs-3 mb-0" style="color: gray;">About us</p>
+                    <h2 class="whiteMode">Nguyễn Minh Triết</h2>
+                    <ul class="whiteMode">
+                        <li>A student in grade 11</li>
+                        <li>Born in 2008</li>
+                        <li>Class : JSA</li>
+                        <li>Favorite : write code, solve math exercises, watch movie, etc</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto mt-5" id="Information">
+        <div class="d-flex mb-3">
+            <i class="fa-brands fa-apple d-flex-center me-3 whiteMode" style="color: gray;"></i>
+            <i class="fa-solid fa-chevron-right d-flex-center me-3 whiteMode"></i>
+            <p class="mb-0 d-flex-center whiteMode" style="color: gray;">Apple Store online</p>
+        </div>
+        <ul class="row list-none">
+            <li class="col-2 grayMode">
+                <h5 class="whiteMode">Shop and learn</h5>
+                <p>Store</p>
+                <p>Mac</p>
+                <p>Ipad</p>
+                <p>Phone</p>
+            </li>
+            <li class="col-2 grayMode">
+                <h5 class="whiteMode">Shop and learn</h5>
+                <p>Store</p>
+                <p>Mac</p>
+                <p>Ipad</p>
+                <p>Phone</p>
+            </li>
+            <li class="col-2 grayMode">
+                <h5 class="whiteMode">Shop and learn</h5>
+                <p>Store</p>
+                <p>Mac</p>
+                <p>Ipad</p>
+                <p>Phone</p>
+            </li>
+            <li class="col-2 grayMode">
+                <h5 class="whiteMode">Shop and learn</h5>
+                <p>Store</p>
+                <p>Mac</p>
+                <p>Ipad</p>
+                <p>Phone</p>
+            </li>
+            <li class="col-2 grayMode">
+                <h5 class="whiteMode">Shop and learn</h5>
+                <p>Store</p>
+                <p>Mac</p>
+                <p>Ipad</p>
+                <p>Phone</p>
+            </li>
+        </ul>
     </div>
     <!-- Bootstraps 5 -->
     <script src="index.js"></script>
