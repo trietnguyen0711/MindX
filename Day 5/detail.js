@@ -59,10 +59,10 @@ for (let i = 0; i < listAccount.length; i++) {
                     // Render san pham
                     let product = listProduct[i]
                     html1 += `
-                <div class="d-flex-between row mt-3" style="border: 1px solid rgba(0, 0, 0, .09)">
+                <div class="d-flex-between row mt-3 " style="border: 1px solid rgba(0, 0, 0, .09)">
                 <img src= ${product.img}
-                    alt="" class="col-2">
-                <div class="col-8">
+                    alt="" class="col-4">
+                <div class="col-8 py-lg-0 py-4">
                     <h4>${product.name}</h4>
                     <p>Classification of goods : red </p>
                     <p>Price : $${product.price}.00</p>

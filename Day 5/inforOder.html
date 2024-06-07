@@ -13,33 +13,67 @@
 </head>
 
 <body>
-    <div class="container-fluid bg-white">
+    <div class="container-fluid bg-white header">
         <div class="container mx-auto row d-flex-between" style="height: 70px;">
             <div class="col-1 h-100 d-flex-center fs-1 cur-pointer"><a href="./index.html"
                     class="fa-brands fa-apple headList-a-nor" style="color: black;"></a></div>
             <ul class="list-none d-flex-between col-10 m-0 d-lg-flex d-none">
-                <a class="fs-6 headList-a-nor cur-pointer cur-pointer">Store</a>
-                <a class="fs-6 headList-a-nor cur-pointer">Mac</a>
-                <a class="fs-6 headList-a-nor cur-pointer">iPad</a>
-                <a class="fs-6 headList-a-nor cur-pointer">iPhone</a>
-                <a class="fs-6 headList-a-nor cur-pointer">Watch</a>
-                <a class="fs-6 headList-a-nor cur-pointer">Vision</a>
-                <a class="fs-6 headList-a-nor cur-pointer">AirPods</a>
-                <a class="fs-6 headList-a-nor cur-pointer">TV & Home</a>
-                <a class="fs-6 headList-a-nor cur-pointer">Entertainment</a>
-                <a class="fs-6 headList-a-nor cur-pointer">Support</a>
+                <a href="index.html" class="fs-6 headList-a-nor cur-pointer">About us</a>
+                <a href="index.html" class="fs-6 headList-a-nor cur-pointer">Latest</a>
+                <a href="index.html" class="fs-6 headList-a-nor cur-pointer">Accessories</a>
+                <a href="index.html" class="fs-6 headList-a-nor cur-pointer">Differences</a>
+                <a href="index.html" class="fs-6 headList-a-nor cur-pointer">Special</a>
+                <a href="index.html" class="fs-6 headList-a-nor cur-pointer">Information</a>
+                <a class="fs-6 headList-a-nor cur-pointer light">Light mode</a>
+                <a class="fs-6 headList-a-nor cur-pointer dark">Dark mode</a>
+                <a class="fs-6 headList-a-nor cur-pointer signUp">sign in</a>
             </ul>
-            <div class="col-lg-1 col-sm-3 col-5 h-100 d-flex-between">
-                <div class="col-lg-1 col-9 cur-pointer signUp">sign in</div>
-                <div class="col-3 cur-pointer position-relative">
+            <div class="col-lg-1 col-3 h-100 d-flex-between">
+                <div class="col-3 cur-pointer">
+                    <a href="./bag.html" class="fs-3 fa-solid fa-bag-shopping headList-a-nor position-relative"
+                        style="color: black;">
+                        <p class="position-absolute bor-rad-nor bg-info d-flex-center top-0 end-0 amountProduct"
+                            style="color:blue; font-size: 10px;">0
+                        </p>
+                    </a>
                 </div>
-                <div class="col-1 d-lg-none d-block cur-pointer"><i class="fa-solid fa-bars"></i>
+                <div class="col-1 d-lg-none d-block cur-pointer listChoose">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container mx-auto row d-flex-between mt-5">
-        <div class="col-5">
+    <div class="container mx-auto row d-flex justify-content-between mt-5">
+        <div class="col-lg-6 px-2">
+            <!-- Bag.js -->
+            <h4 class="">Your Products</h4>
+            <div class="d-flex">
+                <h5 class="me-2">Total Price : </h5>
+                <h5 class="totalPrice"></h5>
+            </div>
+            <div class="listProduct">
+                <!-- <div class="row mt-3">
+                    <div class="col-12 bg-gray" style="height: 3px;"></div>
+                    <img class="col-lg-3 col-4"
+                        src=${localCart[i].img}>
+                    <div class="col-lg-9 col-12">
+                        <div class="d-flex-between w-100 h-50">
+                            <h6 class="w-50">${localCart[i].name}</h6>
+                            <input type="number" class="inputAmount" value="7" style="width:40px" disabled>
+                            <h6>${localCart[i].price}</h6>
+                        </div>
+                        <div class="w-100 h-50 row ">
+                            <h6 class="col-6 h-50">Pay 0% APR for 12 months</h6>
+                            <h6 class="col-6 h-50 d-flex pe-0" style="justify-content: end ;">$4.92/mo.</h6>
+                            <div class="col-6 h-50"></div>
+                        </div>
+                        <div class="col-12 bg-gray" style="height: 3px;"></div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- Bag.js -->
+        </div>
+        <div class="col-lg-5 col-12 mt-lg-0 mt-5">
             <h4 class="px-4">Your Information</h4>
             <ul class="list-none">
                 <li class="d-flex-between px-4 w-75">
@@ -102,36 +136,6 @@
                 <button type="button" class="btn btn-info w-50 mx-auto rounded-pill mt-3 orderButton">Order
                     Now!</button>
             </div>
-        </div>
-
-        <div class="col-6 px-2" style="height: 500px;">
-            <!-- Bag.js -->
-            <h4 class="">Your Products</h4>
-            <div class="d-flex">
-                <h5 class="me-2">Total Price : </h5>
-                <h5 class="totalPrice"></h5>
-            </div>
-            <div class="listProduct">
-                <!-- <div class="row mt-3">
-                    <div class="col-12 bg-gray" style="height: 3px;"></div>
-                    <img class="col-lg-3 col-4"
-                        src=${localCart[i].img}>
-                    <div class="col-lg-9 col-12">
-                        <div class="d-flex-between w-100 h-50">
-                            <h6 class="w-50">${localCart[i].name}</h6>
-                            <input type="number" class="inputAmount" value="7" style="width:40px" disabled>
-                            <h6>${localCart[i].price}</h6>
-                        </div>
-                        <div class="w-100 h-50 row ">
-                            <h6 class="col-6 h-50">Pay 0% APR for 12 months</h6>
-                            <h6 class="col-6 h-50 d-flex pe-0" style="justify-content: end ;">$4.92/mo.</h6>
-                            <div class="col-6 h-50"></div>
-                        </div>
-                        <div class="col-12 bg-gray" style="height: 3px;"></div>
-                    </div>
-                </div> -->
-            </div>
-            <!-- Bag.js -->
         </div>
     </div>
     <!-- Bootstraps 5 -->

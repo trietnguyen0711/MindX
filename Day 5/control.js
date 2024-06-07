@@ -30,7 +30,7 @@ let inner = document.querySelector(".inner")
 let html = ""
 for (let i = 0; i < data.length; i++) {
     html += `
-    <div class="ms-10 size-products bor-rad-nor p-3 color-black me-5 bg-white col-1">
+    <div class="bor-rad-nor p-3 color-black bg-white col-lg-5 col-12">
         <img class="h-75 w-100 bor-rad-nor changeImg"
         src="${data[i].img}"
         alt="">
@@ -41,11 +41,12 @@ for (let i = 0; i < data.length; i++) {
         <input type="number" class="col-2 input" min=1 oninput="buttonInfor(this.value,${data[i].id})"></input>
         </div>
         </div>
-    `
+        `
 }
 inner.innerHTML = html
 // Lấy các giá trị của stock của tất cả các product hiện tại
 let input = document.querySelectorAll(".input")
+let btn = document.querySelector(".btn")
 for (let i = 0; i < input.length; i++) {
     input[i].value = data[i].stock
 }
@@ -55,10 +56,11 @@ function buttonInfor(value, id) {
         if (id == data[i].id) {
             // Kinh nghiệm quý báu làm đợt sau 
             // Nhớ biến tất cả số thành số đừng để dạng string ko là bay màu nếu đi so sánh
-            // data[i].stock = parseInt(value)
-            data[i].stock = +value
-            localStorage.setItem("data", JSON.stringify(data))
-            return
+            data[i].stock = parseInt(value)
+            btn.addEventListener("click", () => {
+                localStorage.setItem("data", JSON.stringify(data))
+                return
+            })
         }
     }
 }

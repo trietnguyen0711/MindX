@@ -115,6 +115,7 @@ if (localStorage.getItem("cart")) {
             updateTotalPrice()
         }
     }
+
     let signUp = document.querySelector(".signUp")
     if (localStorage.getItem("user")) {
         signUp.innerHTML = `<i class="fa-solid fa-user cur-pointer"></i> ${localStorage.getItem("user")}`

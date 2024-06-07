@@ -194,15 +194,3 @@ function darkMode() {
     }
     localStorage.setItem("mode", "dark")
 }
-// Hien ds header
-let listChoose = document.querySelector(".listChoose")
-let ds = document.querySelector(".ds")
-listChoose.addEventListener("click", () => {
-    ds.classList.remove("d-none")
-})
-// Các chức năng cần bổ sung vào trang web
-// - Confirm mật khẩu đăng kí (COMPLETED)
-// - Trừ số lượng hàng sau khi đặt hàng thành công
-// - Chỉ có thể đặt những ngày trong tương lai
-// - Cap nhat lai ma don hang
-// - padStart string in js

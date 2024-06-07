@@ -13,36 +13,19 @@
 </head>
 
 <body class="bg-light main">
-    <div class="mx-auto ds d-none">
-        <div class="container bg-black position-fixed mt-3">
-            <a class="fs-6 headList-a-nor cur-pointer signUp fs-3 whiteMode">Sign up</a>
-            <a href="#Information" class="fs-6 headList-a-nor cur-pointer w-100 d-block mt-2 fs-3 whiteMode">About
-                us</a>
-            <a href="#Latest" class="fs-6 headList-a-nor cur-pointer w-100 d-block mt-2 fs-3 whiteMode">Latest</a>
-            <a href="#Accessories"
-                class="fs-6 headList-a-nor cur-pointer w-100 d-block mt-2 fs-3 whiteMode">Accessories</a>
-            <a href="#Differences"
-                class="fs-6 headList-a-nor cur-pointer w-100 d-block mt-2 fs-3 whiteMode">Differences</a>
-            <a href="#Special" class="fs-6 headList-a-nor cur-pointer w-100 d-block mt-2 fs-3 whiteMode">Special</a>
-            <a href="#Information"
-                class="fs-6 headList-a-nor cur-pointer w-100 d-block mt-2 fs-3 whiteMode">Information</a>
-            <a class="fs-6 headList-a-nor cur-pointer light w-100 d-block mt-2 fs-3 whiteMode">Light mode</a>
-            <a class="fs-6 headList-a-nor cur-pointer dark w-100 d-block mt-2 fs-3 whiteMode">Dark mode</a>
-        </div>
-    </div>
-    <div class="container-fluid bg-white header">
+    <div class="container-fluid bg-white header position-fixed" style="z-index: 100;">
         <div class="container mx-auto row d-flex-between" style="height: 70px;">
             <div class="col-1 h-100 d-flex-center fs-1 cur-pointer"><a href="./index.html"
                     class="fa-brands fa-apple headList-a-nor" style="color: black;"></a></div>
-            <ul class="list-none d-flex-between col-10 m-0 d-lg-flex d-none">
-                <a href="#Information" class="fs-6 headList-a-nor cur-pointer">About us</a>
-                <a href="#Latest" class="fs-6 headList-a-nor cur-pointer">Latest</a>
-                <a href="#Accessories" class="fs-6 headList-a-nor cur-pointer">Accessories</a>
-                <a href="#Differences" class="fs-6 headList-a-nor cur-pointer">Differences</a>
-                <a href="#Special" class="fs-6 headList-a-nor cur-pointer">Special</a>
-                <a href="#Information" class="fs-6 headList-a-nor cur-pointer">Information</a>
-                <a class="fs-6 headList-a-nor cur-pointer light">Light mode</a>
-                <a class="fs-6 headList-a-nor cur-pointer dark">Dark mode</a>
+            <ul class="list-none d-flex-between col-lg-10 col-2 m-0">
+                <a href="#Information" class="fs-6 headList-a-nor cur-pointer d-lg-flex d-none">About us</a>
+                <a href="#Latest" class="fs-6 headList-a-nor cur-pointer d-lg-flex d-none">Latest</a>
+                <a href="#Accessories" class="fs-6 headList-a-nor cur-pointer d-lg-flex d-none">Accessories</a>
+                <a href="#Differences" class="fs-6 headList-a-nor cur-pointer d-lg-flex d-none">Differences</a>
+                <a href="#Special" class="fs-6 headList-a-nor cur-pointer d-lg-flex d-none">Special</a>
+                <a href="#Information" class="fs-6 headList-a-nor cur-pointer d-lg-flex d-none">Information</a>
+                <a class="fs-6 headList-a-nor cur-pointer light d-lg-flex d-none">Light mode</a>
+                <a class="fs-6 headList-a-nor cur-pointer dark d-lg-flex d-none">Dark mode</a>
                 <a class="fs-6 headList-a-nor cur-pointer signUp">sign in</a>
             </ul>
             <div class="col-lg-1 col-3 h-100 d-flex-between">
@@ -54,30 +37,24 @@
                         </p>
                     </a>
                 </div>
-                <div class="col-1 d-lg-none d-block cur-pointer listChoose">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
             </div>
         </div>
     </div>
-    <div class="container-fluid pt-5">
+    <div class="container-fluid mt-lg-0 " style="padding-top: 70px;">
         <div class="container mx-auto row position-relative d-flex-between" style="height: 250px;">
             <div class="col-lg-9 col-12">
-                <h1 class="w-75 d-sm-flex d-none" style="color: gray; min-width: 495px;">Store. The best way
+                <span class="fs-1" style="color: black; min-width: 495px; font-weight: 500;">Store.</span>
+                <span class="fs-1 whiteMode" style="color: gray; font-weight: 500;">The best way
                     to buy the
                     products you
-                    love.</h1>
-                <h1 class="position-absolute m-0 d-sm-flex d-none whiteMode"
-                    style="color: black; transform: translate(0%,-217%);">Store.
-                </h1>
-                <h1 class="w-75 d-sm-none d-flex"><i class="fa-solid fa-store me-2"></i> Apple store</h1>
+                    love.</span>
             </div>
-            <div class="col-lg-3 col-12 d-lg-block d-flex-between ">
-                <div class="" style="width: 150px;">
+            <div class="col-lg-3 col-12 d-lg-block d-flex-between row">
+                <div class="col-12">
                     <h5>Need shopping help?</h5>
                     <a class="a-nor grayMode" href="#">Ask a specialist</a>
                 </div>
-                <div class="" style="width: 150px;">
+                <div class="col-12">
                     <h5 class="whiteMode">Visit an Apple store</h5>
                     <a class="a-nor grayMode" href="#">Find one near you</a>
                 </div>
@@ -323,12 +300,12 @@
     </div>
     <div class="container-fluid aboutUs" style="background-color: whitesmoke;">
         <div class="container row mx-auto">
-            <div class="col-6 d-flex-center" style="height: 500px; width: 500px;">
+            <div class="d-flex-center" style="height: 500px; width: 500px;">
                 <div class="d-flex-center specialBox">
                     <img src="img/img10.jpg" class="h-100 w-100" alt="">
                 </div>
             </div>
-            <div class="col-6 p-2 d-flex-center">
+            <div class="col-lg-6 col-12 p-2 d-flex-center">
                 <div class="">
                     <p class="fs-3 mb-0" style="color: gray;">About us</p>
                     <h2 class="whiteMode">Nguyễn Minh Triết</h2>
@@ -348,41 +325,34 @@
             <i class="fa-solid fa-chevron-right d-flex-center me-3 whiteMode"></i>
             <p class="mb-0 d-flex-center whiteMode" style="color: gray;">Apple Store online</p>
         </div>
-        <ul class="row list-none">
-            <li class="col-2 grayMode">
-                <h5 class="whiteMode">Shop and learn</h5>
-                <p>Store</p>
-                <p>Mac</p>
+        <ul class="row list-none w-100 d-flex-around">
+            <li class="col-lg-2 col-6 grayMode">
+                <h5 class="whiteMode">Information</h5>
+                <p>Apple Store</p>
+                <p>Technology</p>
                 <p>Ipad</p>
                 <p>Phone</p>
             </li>
-            <li class="col-2 grayMode">
-                <h5 class="whiteMode">Shop and learn</h5>
-                <p>Store</p>
-                <p>Mac</p>
-                <p>Ipad</p>
-                <p>Phone</p>
+            <li class="col-lg-2 col-6 grayMode">
+                <h5 class="whiteMode">Pages</h5>
+                <p>Total : 8</p>
+                <p>Order</p>
+                <p>Details</p>
+                <p>Stock</p>
             </li>
-            <li class="col-2 grayMode">
-                <h5 class="whiteMode">Shop and learn</h5>
-                <p>Store</p>
-                <p>Mac</p>
-                <p>Ipad</p>
-                <p>Phone</p>
+            <li class="col-lg-2 col-6 grayMode">
+                <h5 class="whiteMode">Future</h5>
+                <p>Light-Dark</p>
+                <p>Admin</p>
+                <p>Status</p>
+                <p>Backends</p>
             </li>
-            <li class="col-2 grayMode">
-                <h5 class="whiteMode">Shop and learn</h5>
-                <p>Store</p>
-                <p>Mac</p>
-                <p>Ipad</p>
-                <p>Phone</p>
-            </li>
-            <li class="col-2 grayMode">
-                <h5 class="whiteMode">Shop and learn</h5>
-                <p>Store</p>
-                <p>Mac</p>
-                <p>Ipad</p>
-                <p>Phone</p>
+            <li class="col-lg-2 col-6 grayMode">
+                <h5 class="whiteMode">Author</h5>
+                <p>NMT</p>
+                <p>Grade 11</p>
+                <p>2008</p>
+                <p>Developer</p>
             </li>
         </ul>
     </div>

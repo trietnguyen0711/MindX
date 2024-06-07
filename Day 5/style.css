@@ -268,8 +268,3 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-
-.header {
-    position: fixed;
-    z-index: 100;
-}
