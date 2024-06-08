@@ -158,4 +158,19 @@ translatePage[1].addEventListener("click", function () {
     underlineDiv[0].classList.add("d-none")
     translatePage2()
 })
-
+// Chinh light dark mode
+let main = document.querySelector(".main")
+let whiteMode = document.querySelector(".whiteMode")
+if (localStorage.getItem("mode")) {
+    let mode = localStorage.getItem("mode")
+    if (mode == "dark") {
+        main.classList.add("bg-dark")
+        main.classList.remove("bg-white")
+        whiteMode.classList.add("color-white")
+    }
+    else {
+        main.classList.remove("bg-dark")
+        main.classList.add("bg-white")
+        whiteMode.classList.remove("color-white")
+    }
+}

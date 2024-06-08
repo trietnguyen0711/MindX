@@ -204,6 +204,61 @@ if (localStorage.getItem("cart")) {
             }
         }
     }
+    // Chỉnh light và dark mode
+    let header = document.querySelector(".header")
+    let aboutUs = document.querySelector(".aboutUs")
+    let light = document.querySelectorAll(".light")
+    let dark = document.querySelectorAll(".dark")
+    let main = document.querySelector(".main")
+    let whiteMode = document.querySelectorAll(".whiteMode")
+    let grayMode = document.querySelectorAll(".grayMode")
+    for (let i = 0; i < light.length; i++) {
+        if (localStorage.getItem("mode")) {
+            let mode = localStorage.getItem("mode")
+            if (mode == "dark") {
+                darkMode()
+            }
+            else {
+                lightMode()
+            }
+        }
+        light[i].addEventListener("click", () => {
+            lightMode()
+        })
+    }
+    for (let i = 0; i < dark.length; i++) {
+        dark[i].addEventListener("click", () => {
+            darkMode()
+        })
+    }
+    function lightMode() {
+        header.classList.remove("bg-light")
+        header.classList.add("bg-white")
+        // aboutUs.classList.remove("bg-dark")
+        main.classList.remove("bg-dark")
+        main.classList.add("bg-light")
+        for (let i = 0; i < whiteMode.length; i++) {
+            whiteMode[i].classList.remove("color-white")
+        }
+        for (let i = 0; i < grayMode.length; i++) {
+            grayMode[i].classList.remove("color-gray")
+        }
+        localStorage.setItem("mode", "light")
+    }
+    function darkMode() {
+        header.classList.add("bg-light")
+        header.classList.remove("bg-white")
+        // aboutUs.classList.add("bg-dark")
+        main.classList.remove("bg-light")
+        main.classList.add("bg-dark")
+        for (let i = 0; i < whiteMode.length; i++) {
+            whiteMode[i].classList.add("color-white")
+        }
+        for (let i = 0; i < grayMode.length; i++) {
+            grayMode[i].classList.add("color-gray")
+        }
+        localStorage.setItem("mode", "dark")
+    }
 }
 else {
     location.href = "index.html"

@@ -11,7 +11,7 @@ for (let i = 0; i < imgProduct.length; i++) {
     imgProduct[i].innerHTML = `
     <img class="bor-rad-nor h-100"
         src="${localStorage.getItem("img")}"
-        alt="">
+        alt="" style="max-width: 740px;">
     `
 }
 let inforProduct = {
@@ -111,4 +111,57 @@ else {
     signUp.addEventListener("click", function () {
         location.href = "sign.html"
     })
+}
+// Chỉnh light và dark mode
+let header = document.querySelector(".header")
+let aboutUs = document.querySelector(".aboutUs")
+let light = document.querySelectorAll(".light")
+let dark = document.querySelectorAll(".dark")
+let main = document.querySelector(".main")
+let whiteMode = document.querySelectorAll(".whiteMode")
+let grayMode = document.querySelectorAll(".grayMode")
+for (let i = 0; i < light.length; i++) {
+    if (localStorage.getItem("mode")) {
+        let mode = localStorage.getItem("mode")
+        if (mode == "dark") {
+            darkMode()
+        }
+        else {
+            lightMode()
+        }
+    }
+    light[i].addEventListener("click", () => {
+        lightMode()
+    })
+}
+for (let i = 0; i < dark.length; i++) {
+    dark[i].addEventListener("click", () => {
+        darkMode()
+    })
+}
+function lightMode() {
+    header.classList.remove("bg-light")
+    header.classList.add("bg-white")
+    main.classList.remove("bg-dark")
+    main.classList.add("bg-white")
+    for (let i = 0; i < whiteMode.length; i++) {
+        whiteMode[i].classList.remove("color-white")
+    }
+    for (let i = 0; i < grayMode.length; i++) {
+        grayMode[i].classList.remove("color-gray")
+    }
+    localStorage.setItem("mode", "light")
+}
+function darkMode() {
+    header.classList.add("bg-light")
+    header.classList.remove("bg-white")
+    main.classList.remove("bg-white")
+    main.classList.add("bg-dark")
+    for (let i = 0; i < whiteMode.length; i++) {
+        whiteMode[i].classList.add("color-white")
+    }
+    for (let i = 0; i < grayMode.length; i++) {
+        grayMode[i].classList.add("color-gray")
+    }
+    localStorage.setItem("mode", "dark")
 }

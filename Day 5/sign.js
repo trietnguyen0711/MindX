@@ -50,25 +50,47 @@ btn.addEventListener("click", function () {
                     // Kiểm tra tính đúng sai của email và pass
                     let listAccount = JSON.parse(localStorage.getItem("listAccount"))
                     for (let i = 0; i < listAccount.length; i++) {
-                        if (inputEmail.value == listAccount[i].email && inputPassword.value == listAccount[i].password) {
-                            errorEmail.innerText = ""
-                            errorPassword.innerText = ""
-                            location.href = "index.html"
-                            localStorage.setItem("user", listAccount[i].email)
-                            localStorage.setItem("password", listAccount[i].password)
-                            return
+                        // Nhiều tài khoản nên phải sử dụng if để bt khi nào là lần cuối
+                        if (i == listAccount.length) {
+                            if (inputEmail.value == listAccount[i].email && inputPassword.value == listAccount[i].password) {
+                                errorEmail.innerText = ""
+                                errorPassword.innerText = ""
+                                location.href = "index.html"
+                                localStorage.setItem("user", listAccount[i].email)
+                                localStorage.setItem("password", listAccount[i].password)
+                                return
+                            }
+                            else if (inputEmail.value == listAccount[i].email && inputPassword.value != listAccount[i].password) {
+                                errorEmail.innerText = ""
+                                errorPassword.innerText = ""
+                                errorPassword.innerText = "Incorrect password"
+                                return
+                            }
+                            else if (inputEmail.value != listAccount[i].email && inputPassword.value == listAccount[i].password) {
+                                errorEmail.innerText = ""
+                                errorPassword.innerText = ""
+                                errorEmail.innerText = "Incorrect email"
+                                return
+                            }
                         }
-                        else if (inputEmail.value == listAccount[i].email && inputPassword.value != "") {
-                            errorEmail.innerText = ""
-                            errorPassword.innerText = ""
-                            errorPassword.innerText = "Incorrect password"
-                            return
-                        }
-                        else if (inputEmail.value != "" && inputPassword.value == listAccount[i].password) {
-                            errorEmail.innerText = ""
-                            errorPassword.innerText = ""
-                            errorEmail.innerText = "Incorrect email"
-                            return
+                        else {
+                            if (inputEmail.value == listAccount[i].email && inputPassword.value == listAccount[i].password) {
+                                errorEmail.innerText = ""
+                                errorPassword.innerText = ""
+                                location.href = "index.html"
+                                localStorage.setItem("user", listAccount[i].email)
+                                localStorage.setItem("password", listAccount[i].password)
+                            }
+                            else if (inputEmail.value == listAccount[i].email && inputPassword.value != listAccount[i].password) {
+                                errorEmail.innerText = ""
+                                errorPassword.innerText = ""
+                                errorPassword.innerText = "Incorrect password"
+                            }
+                            else if (inputEmail.value != listAccount[i].email && inputPassword.value == listAccount[i].password) {
+                                errorEmail.innerText = ""
+                                errorPassword.innerText = ""
+                                errorEmail.innerText = "Incorrect email"
+                            }
                         }
                     }
                     errorEmail.innerText = ""
@@ -93,7 +115,7 @@ btn.addEventListener("click", function () {
                         errorEmail.innerText = ""
                         errorPassword.innerText = ""
                         errorEmail.innerText = "This email has already been used"
-                        errorPassword.innerText = "This password has already been used"
+                        // errorPassword.innerText = "This password has already been used"
                         return
                     }
                     else if (inputEmail.value == listAccount[i].email) {
@@ -102,12 +124,12 @@ btn.addEventListener("click", function () {
                         errorEmail.innerText = "This email has already been used"
                         return
                     }
-                    else if (inputPassword.value == listAccount[i].password) {
-                        errorEmail.innerText = ""
-                        errorPassword.innerText = ""
-                        errorPassword.innerText = "This password has already been used"
-                        return
-                    }
+                    // else if (inputPassword.value == listAccount[i].password) {
+                    //     errorEmail.innerText = ""
+                    //     errorPassword.innerText = ""
+                    //     errorPassword.innerText = "This password has already been used"
+                    //     return
+                    // }
                 }
                 // function giúp thêm tạo và thêm account vào listAccount
                 createAcount()
