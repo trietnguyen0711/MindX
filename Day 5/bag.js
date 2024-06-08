@@ -24,14 +24,15 @@ if (localStorage.getItem("cart")) {
         <div class="row mt-5">
         <div class="col-12 bg-gray" style="height: 3px;"></div>
         <img class="col-lg-3 col-4" src="${localCart[i].img}">
-        <div class="col-lg-9 col-12">
-            <div class="d-flex-between w-100 h-50">
-                <h4 class="w-50">${localCart[i].name}</h4>
-                <input type="number" class="inputAmount" oninput="updateInput(this.value, ${localCart[i].id})" min="1"
-                    style="width:40px">
-                <h4>$${localCart[i].price}.00</h4>
+        <div class="col-lg-9 col-12 row">
+            <div class="d-flex-between col-12 row">
+                <h4 class="col-11">${localCart[i].name}</h4>
+                <div class="col-1">
+                    <input type="number" class="inputAmount" oninput="updateInput(this.value, ${localCart[i].id})" min="1" style="width:40px">
+                </div>
+                <h4 class="my-lg-0 my-3">$${localCart[i].price}.00</h4>
             </div>
-            <div class="w-100 h-50 row ">
+            <div class="col-12 row ">
                 <div class="col-6 h-50">Pay 0% APR for 12 months</div>
                 <div class="col-6 h-50 d-flex pe-0" style="justify-content: end ;">$4.92/mo.</div>
                 <div class="d-flex-between">

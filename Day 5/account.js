@@ -99,13 +99,13 @@ function translatePage2() {
                     <div class="row mt-5">
                         <div class="col-12 bg-gray" style="height: 3px;"></div>
                         <img class="col-lg-3 col-4" src=${listProduct[0].img}>
-                        <div class="col-lg-9 col-12">
-                            <div class="d-flex-between w-100 h-50">
-                                <h4 class="w-50">${listProduct[0].name} (more)</h4>
-                                <h4>Successful</h4>
+                        <div class="col-lg-9 col-12 row">
+                            <div class="d-flex-between w-100 col-lg-6 col-12 row">
+                                <h4 class="col-lg-10 col-12">${listProduct[0].name} (more)</h4>
+                                <h4 class="col-lg-2 col-12 text-center">Successful</h4>
                             </div>
-                            <div class="w-100 h-50 row ">
-                                <div class="col-6 h-50 mt-md-0 mt-3">Products: ${totalAmount()}</div>
+                            <div class="w-100 col-lg-6 col-12 row ">
+                                <div class="col-6 h-50 ">Products: ${totalAmount()}</div>
                                 <div class="col-6 h-50 d-flex pe-0" style="justify-content: end ;">Price :$${totalPrict()}.00</div>
                                 <div class="col-6 h-50"></div>
                                 <a class="col-6 h-50 headList-a-nor d-flex cur-pointer"

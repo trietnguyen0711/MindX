@@ -66,13 +66,15 @@ if (localStorage.getItem("cart")) {
                     <div class="col-12 bg-gray" style="height: 3px;"></div>
                     <img class="col-lg-3 col-4"
                         src=${localCart[i].img}>
-                    <div class="col-lg-9 col-12">
-                        <div class="d-flex-between w-100 h-50">
-                            <h6 class="w-50">${localCart[i].name}</h6>
-                            <input type="number" class="inputAmount" value="${localCart[i].amount}" style="width:40px" disabled>
+                    <div class="col-lg-9 col-12 row">
+                        <div class="d-flex-between col-12 row">
+                            <h6 class="col-10">${localCart[i].name}</h6>
+                            <div class="col-1">
+                                <input type="number" class="inputAmount" value="${localCart[i].amount}" style="width:40px" disabled>
+                            </div>
                             <h6>$${localCart[i].price}.00</h6>
                         </div>
-                        <div class="w-100 h-50 row ">
+                        <div class="col-12 row ">
                             <h6 class="col-6 h-50">Total Price : </h6>
                             <h6 class="col-6 h-50 d-flex pe-0" style="justify-content: end ;">$${localCart[i].price * localCart[i].amount}.00</h6>
                             <div class="col-6 h-50"></div>
@@ -159,6 +161,7 @@ if (localStorage.getItem("cart")) {
                                 city: inforCity.value,
                                 district: inforDistrict.value,
                                 product: localCart,
+                                address: inforAddress.value,
                             }
                             listOrder.push(newOrder)
                             updateListOrder(listOrder)
@@ -205,3 +208,4 @@ if (localStorage.getItem("cart")) {
 else {
     location.href = "index.html"
 }
+// Giới hạn ngày chọn của input

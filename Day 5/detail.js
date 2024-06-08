@@ -42,8 +42,19 @@ for (let i = 0; i < listAccount.length; i++) {
                 let note = document.querySelector(".note").innerHTML = `Your note : ${listOrder[i].note}`
                 let nameOrder = document.querySelector(".nameOrder").innerHTML = `${listOrder[i].nameOrder}`
                 let phoneOrder = document.querySelector(".phoneOrder").innerHTML = `${listOrder[i].phone}`
+                // Ham TG
+                const today = new Date();
+                const day = today.getDate();
+                const month = today.getMonth() + 1; // Tháng trong JavaScript bắt đầu từ 0
+                const year = today.getFullYear();
+                let type1 = document.querySelector(".type1")
+                let type2 = document.querySelector(".type2")
                 // Kiem tra tinh ton tai cua nhung gtr nay
                 if (listOrder[i].address) {
+                    type1.innerHTML = `
+                    <h6 class="mx-3 d-flex-center">Estimated delivery date:</h6>
+                    <p class="d-flex-center mb-2">${day + 5}-${month}-${year}</p>
+                    `
                     let addressOrder = document.querySelector(".addressOrder").innerHTML = `${listOrder[i].address}`
                     let cityDisOrder = document.querySelector(".cityDisOrder").innerHTML = `${listOrder[i].district}, ${listOrder[i].city}`
                 }
@@ -51,6 +62,10 @@ for (let i = 0; i < listAccount.length; i++) {
                     let addressOrder = document.querySelector(".addressOrder").innerHTML = `Appointment Day : ${listOrder[i].date}`
                     let cityDisOrder = document.querySelector(".cityDisOrder").innerHTML = `Store : ${listOrder[i].store}`
                 }
+                type2.innerHTML = `
+                    <h6 class="mx-3 d-flex-center">Order date:</h6>
+                    <p class="d-flex-center mb-2">${day}-${month}-${year}</p>
+                    `
                 let listProduct = listOrder[i].product
                 let html1 = ""
                 let html2 = ""
@@ -86,3 +101,5 @@ for (let i = 0; i < listAccount.length; i++) {
         }
     }
 }
+// Dự đoán được ngày giao hàng
+// Lấy được giá trị ngày hôm nay
