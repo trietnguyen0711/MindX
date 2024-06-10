@@ -53,7 +53,7 @@ for (let i = 0; i < data.length; i++) {
             id: data[i].id,
             stock: data[i].stock
         }
-        html += `<div class="size-products bor-rad-nor p-3 color-black me-5 bg-white">
+        html += `<div class="size-products bor-rad-nor p-3 color-black me-5 bg-white opacityAnimation">
         <img class="h-75 w-100 bor-rad-nor changeImg"
         src="${inforProduct.img}"
         alt="">
@@ -128,13 +128,13 @@ function updateAmount() {
 let signUp = document.querySelectorAll(".signUp")
 for (let i = 0; i < signUp.length; i++) {
     if (localStorage.getItem("user")) {
-        signUp[i].innerHTML = `<i class="fa-solid fa-user cur-pointer"></i> ${localStorage.getItem("user")}`
-        signUp[i].addEventListener("click", function () {
+        signUp[i].innerHTML = `<i class="fa-solid fa-user cur-pointer me-2"></i> ${localStorage.getItem("user")}`
+        signUp[i].addEventListener("click", () => {
             location.href = "account.html"
         })
     }
     else {
-        signUp[i].addEventListener("click", function () {
+        signUp[i].addEventListener("click", () => {
             location.href = "sign.html"
         })
     }
@@ -194,3 +194,30 @@ function darkMode() {
     }
     localStorage.setItem("mode", "dark")
 }
+// Scroll 
+let opacityAnimation = document.querySelectorAll(".opacityAnimation");
+let leftAnimation = document.querySelector(".leftAnimation")
+let rightAnimation = document.querySelector(".rightAnimation")
+window.addEventListener("scroll", () => {
+    for (let i = 0; i < opacityAnimation.length; i++) {
+        setTimeout(() => {
+            let elementRect = opacityAnimation[i].getBoundingClientRect();
+            if (!(elementRect.top < 0 || elementRect.top > window.innerHeight)) {
+                opacityAnimation[i].classList.add("opacity-Animation");
+            }
+        }, i * 200)
+    }
+    let elementRect1 = leftAnimation.getBoundingClientRect()
+    if (!(elementRect1.top < 0 || elementRect1.top > window.innerHeight)) {
+        leftAnimation.classList.add("left-Animation");
+    }
+    let elementRect2 = leftAnimation.getBoundingClientRect()
+    if (!(elementRect2.top < 0 || elementRect2.top > window.innerHeight)) {
+        rightAnimation.classList.add("right-Animation");
+    }
+})
+
+
+
+
+

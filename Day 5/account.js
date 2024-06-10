@@ -43,7 +43,7 @@ if (localStorage.getItem("user")) {
     btnLog.innerHTML = `Log out`
     btnLog.addEventListener("click", function () {
         localStorage.removeItem("user")
-        location.reload();
+        location.href = "index.html"
     })
 }
 else {

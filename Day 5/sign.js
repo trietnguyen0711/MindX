@@ -51,7 +51,7 @@ btn.addEventListener("click", function () {
                     let listAccount = JSON.parse(localStorage.getItem("listAccount"))
                     for (let i = 0; i < listAccount.length; i++) {
                         // Nhiều tài khoản nên phải sử dụng if để bt khi nào là lần cuối
-                        if (i == listAccount.length) {
+                        if (i == listAccount.length - 1) {
                             if (inputEmail.value == listAccount[i].email && inputPassword.value == listAccount[i].password) {
                                 errorEmail.innerText = ""
                                 errorPassword.innerText = ""
@@ -72,6 +72,10 @@ btn.addEventListener("click", function () {
                                 errorEmail.innerText = "Incorrect email"
                                 return
                             }
+                            errorEmail.innerText = ""
+                            errorPassword.innerText = ""
+                            errorEmail.innerText = "Incorrect email and password"
+                            errorPassword.innerText = "Incorrect email and password"
                         }
                         else {
                             if (inputEmail.value == listAccount[i].email && inputPassword.value == listAccount[i].password) {
@@ -85,18 +89,17 @@ btn.addEventListener("click", function () {
                                 errorEmail.innerText = ""
                                 errorPassword.innerText = ""
                                 errorPassword.innerText = "Incorrect password"
+                                // Đúng email mà sai password thì ko cần KT đến thằng cuối nên return
+                                return
                             }
-                            else if (inputEmail.value != listAccount[i].email && inputPassword.value == listAccount[i].password) {
-                                errorEmail.innerText = ""
-                                errorPassword.innerText = ""
-                                errorEmail.innerText = "Incorrect email"
-                            }
+                            // Vì nhiều email có cùng 1 password nên ko cần điều kiện này (chỉ kiểm tra sai email đối với thằng cuối cùng)
+                            // else if (inputEmail.value != listAccount[i].email && inputPassword.value == listAccount[i].password) {
+                            //     errorEmail.innerText = ""
+                            //     errorPassword.innerText = ""
+                            //     errorEmail.innerText = "Incorrect email"
+                            // }
                         }
                     }
-                    errorEmail.innerText = ""
-                    errorPassword.innerText = ""
-                    errorEmail.innerText = "Incorrect email and password"
-                    errorPassword.innerText = "Incorrect email and password"
                 }
             }
             else {
@@ -202,7 +205,7 @@ function createAcount() {
         errorPassword.innerText = "Please write your password"
     }
     else {
-        // lưu lên local biến passwordConfirm với mục đích chuyển dao cho thằng passwordConfirm ở dòng 123
+        // lưu lên local biến passwordConfirm với mục đích chuyển giao cho thằng passwordConfirm ở dòng 149
         localStorage.setItem("passwordConfirm", JSON.stringify(inputPassword.value))
         // Xóa input Email đồng thời thay đổi nội dung Pass thành confirm password
         errorEmail.innerText = ""
