@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+.main {
+    transition: 0.5s all;
+}
+
 /* Animation Time */
 .leftAnimation {
     opacity: 0;
@@ -26,6 +30,7 @@
     opacity: 1;
     transform: translate(90%, 70%);
 }
+
 
 
 .opacityAnimation {

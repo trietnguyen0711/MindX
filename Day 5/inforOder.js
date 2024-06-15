@@ -200,6 +200,7 @@ if (localStorage.getItem("cart")) {
                         }
                         localStorage.setItem("data", JSON.stringify(data))
                     }
+                    return
                 }
             }
         }
