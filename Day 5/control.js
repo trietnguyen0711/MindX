@@ -52,15 +52,18 @@ for (let i = 0; i < input.length; i++) {
 }
 // function cập nhật stock theo yêu cầu
 function buttonInfor(value, id) {
+    let flag = true
     for (let i = 0; i < data.length; i++) {
         if (id == data[i].id) {
             // Kinh nghiệm quý báu làm đợt sau 
             // Nhớ biến tất cả số thành số đừng để dạng string ko là bay màu nếu đi so sánh
             data[i].stock = parseInt(value)
             btn.addEventListener("click", () => {
-                console.log("123")
+                if (flag == true) {
+                    alert("Successful!")
+                    flag = false
+                }
                 localStorage.setItem("data", JSON.stringify(data))
-                alert("Successful!")
                 return
             })
             return
