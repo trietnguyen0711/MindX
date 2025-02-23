@@ -1,0 +1,27 @@
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.d-flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.d-flex-end {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.transition-transform {
+    transition: transform 0.5s ease-in-out;
+}

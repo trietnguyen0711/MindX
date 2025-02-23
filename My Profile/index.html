@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div
+        class="header backdrop-blur bg-opacity-50 shadow-md transition-transform w-full bg-white flex justify-between h-[76px] py-[10px] fixed z-50 shadow-lg border-b border-gray-300">
+        <!-- Logo -->
+        <div class="symbol w-1/2 h-full flex items-center pl-4">
+            <div
+                class="h-full border-4 border-black w-[200px] flex justify-center items-center rounded-xl shadow-sm bg-gray-100 hover:bg-gray-200 transition">
+                <p class="font-bold cursor-pointer text-[25px] text-gray-800">My Profile</p>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <ul class="w-2/3 h-full flex items-center justify-end pr-4 space-x-6">
+            <li class="relative group w-auto p-2">
+                <p class="text-gray-800 font-bold text-[20px] cursor-pointer transition hover:text-gray-500">Home</p>
+                <div
+                    class="absolute bottom-0 left-0 w-0 h-[3px] bg-blue-500 group-hover:w-full transition-all duration-300">
+                </div>
+            </li>
+            <li class="relative group w-auto p-2">
+                <p class="text-gray-800 font-bold text-[20px] cursor-pointer transition hover:text-gray-500">About</p>
+                <div
+                    class="absolute bottom-0 left-0 w-0 h-[3px] bg-blue-500 group-hover:w-full transition-all duration-300">
+                </div>
+            </li>
+            <li class="relative group w-auto p-2">
+                <p class="text-gray-800 font-bold text-[20px] cursor-pointer transition hover:text-gray-500">Portfolio
+                </p>
+                <div
+                    class="absolute bottom-0 left-0 w-0 h-[3px] bg-blue-500 group-hover:w-full transition-all duration-300">
+                </div>
+            </li>
+            <li class="relative group w-auto p-2">
+                <p class="text-gray-800 font-bold text-[20px] cursor-pointer transition hover:text-gray-500">My jobs</p>
+                <div
+                    class="absolute bottom-0 left-0 w-0 h-[3px] bg-blue-500 group-hover:w-full transition-all duration-300">
+                </div>
+            </li>
+            <li class="relative group w-auto p-2">
+                <p class="text-gray-800 font-bold text-[20px] cursor-pointer transition hover:text-gray-500">Connect
+                    with me</p>
+                <div
+                    class="absolute bottom-0 left-0 w-0 h-[3px] bg-blue-500 group-hover:w-full transition-all duration-300">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="background">
+        <div class="relative">
+            <img src="https://calendarlo.com/wp-content/uploads/2022/07/high-resolution-tropical-summer-themed-desktop-wallpaper-1536x864.jpg"
+                class="w-screen" alt="YouTube Thumbnail">
+            <div class="absolute bottom-[5%] left-[5%] transform  text-center text-gray-100">
+                <p class="text-[70px] font-bold flex">Nguyen</p>
+                <p class="text-[70px] font-bold flex">Minh Triet</p>
+                <p class="text-[30px] font-bold flex">Ai Engineer</p>
+                <div
+                    class="p-2 border-2 border-gray-100 w-[150px] mt-4 cursor-pointer hover:bg-gray-300 hover:text-black hover:duration-1000  transition ">
+                    <p class="font-semibold">My Infor</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="infor my-[200px] px-[300px] h-[700px] overflow-hidden">
+        <div class="h-full d-flex-between items-start">
+            <div class="w-1/2 h-2/3">
+                <img src="" alt="My picture" class="h-full w-2/3 bg-black">
+            </div>
+            <div class="w-1/2 h-full">
+                <h1 class="text-[50px] text-black">Tiểu sử</h1>
+                <p class="mt-4 text-black text-[15px] w-2/3">Xin chào mình là Nguyễn Minh Triết, một kĩ sư chuyên ngành
+                    Ai.
+                    Mình là một người đam mê với lập trình, một người có khả năng lan tỏa sự thích thú đến mọi người
+                    cũng như là một người có khả năng sử dụng thành thạo các ngôn ngữ lập trình giúp tạo năng suất rất
+                    lớn cho các dự án</p>
+                <div class="mt-5 h-full w-full d-flex-end">
+                    <img src="" alt="My job" class="h-full w-3/4 bg-black">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project mb-[200px] px-[200px] h-[700px] overflow-hidden">
+        <div class="h-1/2 d-flex-between items-start">
+            <div class="h-full w-1/3">
+                <div class="w-full h-full">
+                    <h1 class="text-[50px] text-black">Dự án nổi bật </h1>
+                    <p class="mt-4 text-black text-[15px] w-2/3">Là một AI Engineer đam mê công nghệ, tôi không chỉ xây
+                        dựng các mô hình trí tuệ nhân tạo, mà còn biến chúng thành những giải pháp thực tiễn, giúp doanh
+                        nghiệp và cộng đồng tối ưu hóa quy trình, tiết kiệm chi phí và khai phá tiềm năng từ dữ liệu.
+                    </p>
+                </div>
+            </div>
+            <div class="h-full w-2/3">
+                <div class="w-full h-3/4 d-flex-between">
+                    <img src="" alt="My project" class="bg-black w-2/3 h-full">
+                    <div class="w-1/3 h-full pl-[10px] flex flex-col justify-end">
+                        <h1 class="text-[20px] font-semibold">Hệ thống phân tích hình ảnh thông minh</h1>
+                        <p class="text-[15px]">Sử dụng Deep Learning để phát hiện và nhận diện đối tượng trong hình ảnh
+                            và video theo thời gian thực, ứng dụng trong giám sát an ninh và tự động hóa công nghiệp.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-1/2 d-flex-between items-start">
+            <div class="h-full w-full d-flex-between">
+                <img src="" alt="My project" class="bg-black w-2/3 h-full">
+                <div class="w-1/3 h-full pl-[10px] flex flex-col justify-end">
+                    <h1 class="text-[20px] font-semibold">Trợ lý ảo AI sử dụng NLP</h1>
+                    <p class="text-[15px]">Phát triển chatbot AI có khả năng hiểu và phản hồi bằng ngôn ngữ tự
+                        nhiên, giúp doanh nghiệp tương tác tốt hơn với khách hàng thông qua nhiều nền tảng.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="relative">
+            <img src="https://www.yourtango.com/sites/default/files/image_blog/synchronicity-or-psychosis.jpg"
+                alt="YouTube Thumbnail" class="w-screen h-auto object-cover mx-auto">
+            <div class="absolute top-[15%] right-0 text-gray-100 w-1/3">
+                <p class="text-[50px] font-bold flex mb-2">"Bước qua từng khoảnh khắc, mình lại học thêm một điều
+                    mới
+                    và từ
+                    những
+                    điều
+                    đó đã tạo nên một Minh Triết như bây giờ"</p>
+                <p class="text-[20px] font-bold flex">Cố gắng, cố gắng nữa, cố gắng mãi mãi</p>
+                <p class="text-[20px] font-bold flex">Never give up !</p>
+            </div>
+        </div>
+    </div>
+    <div class="my-[100px] px-[100px] h-[700px] overflow-hidden">
+        <p class="text-[70px] left-[10%] top-[10%] text-black font-bold mb-[50px]">Khả năng đặc trưng</p>
+        <div class="d-flex-between h-full w-full">
+            <div class="w-1/2 h-full">
+                <p class="text-[30px] font-bold mb-5">Học Vấn</p>
+                <ul
+                    class="text-[20px] space-y-2 [&>li]:before:content-['✦'] [&>li]:before:mr-2 [&>li]:before:text-green-500">
+                    <li>Học sinh chuyên toán trường THPT chuyên Lê Hồng Phong</li>
+                    <li>Chứng nhận thành thạo Javascript</li>
+                    <li>Chứng nhận kiến thức AI cơ bản</li>
+                </ul>
+                <div class="mt-5 w-[600px] h-[300px] bg-black"></div>
+            </div>
+            <div class="w-1/2 h-full">
+
+                <div class="mt-5 w-[600px] h-[300px] bg-black"></div>
+                <p class="text-[30px] font-bold mt-5">Học Vấn</p>
+                <ul
+                    class="text-[20px] space-y-2 [&>li]:before:content-['✦'] [&>li]:before:mr-2 [&>li]:before:text-green-500 w-full">
+                    <li class="w-full">Học sinh chuyên toán trường THPT chuyên Lê Hồng Phong</li>
+                    <li>Chứng nhận thành thạo Javascript</li>
+                    <li>Chứng nhận kiến thức AI cơ bản</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="my-[100px] px-[100px] h-[400px] overflow-hidden">
+        <div class="d-flex-between">
+            <p class="text-[70px] font-bold">Liên hệ</p>
+            <div class="p-4 border-2 border-transparent w-[200px] mt-6 cursor-pointer 
+            bg-gradient-to-r from-blue-500 to-blue-700 text-white text-lg font-bold rounded-xl 
+            shadow-md hover:shadow-2xl 
+            transform hover:scale-105 transition duration-300 ease-in-out">
+                <p class="font-semibold">Gửi email cho mình</p>
+            </div>
+
+
+        </div>
+        <p class="mt-[50px] text-[30px]">minhTrietprofile.com</p>
+        <div class="w-[400px] h-[40px] mt-[50px] d-flex-between">
+            <p class="text-[30px]">Mạng xã hội</p>
+            <div class="h-[40px] w-[40px] d-flex-center rounded-full text-[20px] bg-[#1877F2] text-white"><i
+                    class="fa-brands fa-facebook"></i></div>
+            <div class="h-[40px] w-[40px] d-flex-center rounded-full text-[20px] bg-[#1DA1F2] text-white"><i
+                    class="fa-brands fa-discord"></i></div>
+            <div class="h-[40px] w-[40px] d-flex-center rounded-full text-[20px] bg-black text-white"><i
+                    class="fa-brands fa-twitter"></i></div>
+        </div>
+
+    </div>
+    <script src="style.js"></script>
+
+</body>
+
+</html>
