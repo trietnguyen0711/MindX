@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Tree Task Manager</title>
+    <link rel="stylesheet" href="styleApp.css">
+</head>
+
+<body>
+    <div class="container" id="taskContainer"></div>
+    <button class="add-task-btn" onclick="addTask()">Thêm tác vụ</button>
+    <div class="popup" id="popup">
+        <p id="popupText"></p>
+        <button onclick="confirmTask(true)">Yes</button>
+        <button onclick="confirmTask(false)">No</button>
+    </div>
+    <div id="rubyContainer">
+        <div class="ruby-item"><span>💎 Ruby Xanh:</span> <span id="rubyGreen">0</span></div>
+        <div class="ruby-item"><span>💎 Ruby Trắng:</span> <span id="rubyWhite">0</span></div>
+        <hr>
+        <div class="ruby-item"><span>🔻 Đã dùng Xanh:</span> <input type="number" id="usedGreen" min="0"></div>
+        <div class="ruby-item"><span>🔻 Đã dùng Trắng:</span> <input type="number" id="usedWhite" min="0"></div>
+    </div>
+
+    <script src="scriptApp.js"></script>
+</body>
+
+</html>

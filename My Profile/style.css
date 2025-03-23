@@ -1,3 +1,44 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animation Time */
+.leftAnimation {
+    opacity: 0;
+    transform: translate(-140%);
+    transition: 2s;
+}
+
+.left-Animation {
+    opacity: 1;
+    transform: translate(0%);
+}
+
+.rightAnimation {
+    opacity: 0;
+    transform: translate(140%);
+    transition: 2s;
+}
+
+.right-Animation {
+    opacity: 1;
+    transform: translate(0%);
+}
+
+
+
+.opacityAnimation {
+    opacity: 0;
+    transform: translate(0%, 50%);
+    transition: 2s;
+}
+
+.opacity-Animation {
+    transform: translate(0%, 0%);
+    opacity: 1;
+}
+
+/* Set up attribute */
 .d-flex-center {
     display: flex;
     justify-content: center;
